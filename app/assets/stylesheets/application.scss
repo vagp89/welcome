@@ -11,3 +11,19 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #FBFBFF;
+}
+
+.btn-wel {
+  background-color: #2E4057;
+  color: #FBFBFF;
+  border-radius: 2px;
+  padding: 15px, 25px !important;
+}
+
+.btn-wel:hover {
+  color: #FAAA0A;
+}
