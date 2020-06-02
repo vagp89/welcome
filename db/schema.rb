@@ -10,10 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_134716) do
+ActiveRecord::Schema.define(version: 2020_06_01_154813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string "content"
+    t.string "title"
+    t.bigint "author_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_id"], name: "index_articles_on_author_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "comment_author_id"
+    t.bigint "comment_article_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["comment_article_id"], name: "index_comments_on_comment_article_id"
+    t.index ["comment_author_id"], name: "index_comments_on_comment_author_id"
+  end
+
+  create_table "consultations", force: :cascade do |t|
+    t.datetime "date"
+    t.bigint "asker_id"
+    t.bigint "mentor_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["asker_id"], name: "index_consultations_on_asker_id"
+    t.index ["mentor_id"], name: "index_consultations_on_mentor_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "asker_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["asker_id"], name: "index_reviews_on_asker_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +61,19 @@ ActiveRecord::Schema.define(version: 2020_06_01_134716) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "price"
+    t.string "location"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "articles", "users", column: "author_id"
+  add_foreign_key "comments", "articles", column: "comment_article_id"
+  add_foreign_key "comments", "users", column: "comment_author_id"
+  add_foreign_key "consultations", "users", column: "asker_id"
+  add_foreign_key "consultations", "users", column: "mentor_id"
+  add_foreign_key "reviews", "consultations", column: "asker_id"
 end

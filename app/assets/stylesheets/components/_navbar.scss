@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #FBFBFF;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +9,29 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav-item {
+  font-size: 1.2em;
+}
+
+.navbar-icon {
+  color: #2E4057;
+  font-size: 1.5em;
+  position: relative;
+  left: 15px;
+  top: 8px;
+}
+
+.icon-w {
+  color: #FAAA0A;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  position: absolute;
+}
+
+.icon-compass {
+  left: 22px;
+  top: 4px;
 }
