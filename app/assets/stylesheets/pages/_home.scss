@@ -4,8 +4,9 @@
   color: #FAAA0A;
   font-weight: bold;
   font-size: 8em;
-  position: relative;
-  top: 125px;
+  position: absolute;
+  top: 140px;
+  left: 100px;
 }
 
 #main-p {
@@ -20,7 +21,7 @@
 
 .main-body {
   position: relative;
-  top: 145px;
+  top: 115px;
   left: 40px;
   height: 200px;
   width: 375px;
@@ -28,6 +29,10 @@
 
 .home-form {
   position: relative;
-  top: 145px;
+  top: 115px;
   left: 40px;
+}
+
+.main-container {
+  width: 50%;
 }
