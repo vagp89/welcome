@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <% unless @articles.empty? %>
+    <ul>
+      <% @articles.each do |article| %>
+        <li><h3><%= link_to article.title, article_path(article) %></h3>
+        <p><%= article.content %></p></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
