@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h1 class="title">Write a comment for <%= @article.title %></h1>
+
+  <%= simple_form_for([@article, @comment]) do |f| %>
+    <%= f.input :content %>
+    <%= f.submit class: "btn btn-outline-primary btn-sm" %>
+  <% end %>
+
+  <div class= "mt-3">
+    <%= link_to 'Back', article_path, class: "btn btn-outline-primary btn-sm" %>
+  </div>
+</div>
