@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'pages#home'
-  devise_for :users do 
-    resources :consultations, only: [:new, :create, :edit, :update, :show]
-  end
+  devise_for :users
+
+  resources :consultations, only: [:new, :create, :edit, :update, :show]
+
   resources :consultations, only: [:destroy] do
     resources :reviews, only: [:new, :create]
   end
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :dashboard, only: [:index]
 
   resources :articles do
-    resources :reviews, only: [:new, :create]
+    resources :comments, only: [:new, :create]
   end
  end
 
