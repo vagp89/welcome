@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-5">
   <h2><%= @article.title %>
     <span><%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_article_path %></span>
     <span class="text-right"><%= link_to "<i class='far fa-trash-alt'></i>".html_safe,
@@ -11,14 +11,15 @@
   </div>
 
   <p class="pt-4"><%= link_to "Back to articles", articles_path %></p>
+  <p class="pt-4"><%= link_to "Write a comment", new_article_comment_path(@article) %></p>
 
   <div class="row">
   <div class="col-12">
     <h2 class="title text-center my-5">Comments For <%= @article.title %></h2>
       <ul>
-        <% @article.comments.each do |review| %>
+        <% @article.comments.each do |comment| %>
           <li>
-            <div class="card mt-3">
+            <div class="card my-3">
               <div class="card-header">
                 <p>Comment:</p>
               </div>
