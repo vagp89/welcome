@@ -1,9 +1,10 @@
 class CreateArticles < ActiveRecord::Migration[6.0]
   def change
     create_table :articles do |t|
-      t.string :content
+      t.text :content
       t.string :title
-      t.references :author, foreign_key: { to_table: :users }
+      t.references :user, null: false, foreign_key: true
+
       t.timestamps
     end
   end
