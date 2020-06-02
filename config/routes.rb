@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
   end
- end
+end
 
 
 
