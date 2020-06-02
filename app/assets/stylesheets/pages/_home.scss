@@ -1,1 +1,33 @@
 // Specific CSS for your home-page
+#main-header {
+  font-family: 'Rubik', sans-serif;
+  color: #FAAA0A;
+  font-weight: bold;
+  font-size: 8em;
+  position: relative;
+  top: 125px;
+}
+
+#main-p {
+ font-weight: lighter;
+ font-size: 1.2em;
+}
+
+.main-icon {
+  color: #2E4057;
+  font-size: .8em;
+}
+
+.main-body {
+  position: relative;
+  top: 145px;
+  left: 40px;
+  height: 200px;
+  width: 375px;
+}
+
+.home-form {
+  position: relative;
+  top: 145px;
+  left: 40px;
+}
