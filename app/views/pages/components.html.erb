@@ -1,6 +1,84 @@
 <!-- normal button -->
+<div class="container my-5">
 <div>
 <button class="m-btn">Read Article</button>
 </div>
 
+<!-- Mentor card -->
+<div class="card-trip" style="width: 18rem;">
+  <div class="p-3">
+    <img class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
+  </div>
+  <div class="card-trip-infos">
+    <div>
+      <h2 class="pb-1">Marta Müller</h2>
+      <p class="pt-1 pb-3">Muffin cupcake jelly jelly-o oat cake. Sesame snaps topping tiramisu pudding carrot cake. Soufflé liquorice lollipop chocolate bar chocolate cake croissant. Halvah sugar plum ice cream fruitcake lemon drops wafer. </p>
+      <button class="c-btn">view profile</button>
+    </div>
+  </div>
+</div>
 
+<!-- Search bar -->
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group" style="width: 28rem;">
+    <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search search-icon"></i>
+    </button>
+  </div>
+<% end %>
+
+<!-- call to action: book a mentor (articles index) -->
+<div class="card-add" style="width: 25rem;">
+  <h2 class="pb-1 text-center">Book a <span class="emp-y">free</span> consultation with a mentor in <span class="emp-y">Berlin</span></h2>
+  <div class="card-add-infos">
+    <div class="container">
+      <div class="row">
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+      <button class="c-btn">find your mentor</button>
+    </div>
+  </div>
+</div>
+
+<!-- Article card -->
+<div class="card-article" style="width: 18rem;">
+  <div class="p-3">
+    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" >
+  </div>
+  <div class="card-article-infos">
+    <div>
+      <h2 class="pb-1">Explore Berlin</h2>
+      <p class="mb-3 lt">published on 12/20/19</p>
+      <p class="pt-1 pb-4">Muffin cupcake jelly jelly-o oat cake. Sesame snaps topping tiramisu pudding carrot cake. Soufflé  liquorice lollipop chocolate bar chocolate cake croissant. Halvah sugar plum ice cream fruitcake lemon drops wafer. </p>
+      <button class="c-btn">Read article</button>
+    </div>
+  </div>
+</div>
