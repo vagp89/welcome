@@ -1,4 +1,4 @@
-class ConsultationPolicy < ApplicationPolicy
+class ReviewPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -15,9 +15,5 @@ class ConsultationPolicy < ApplicationPolicy
 
   def show?
     true
-  end
-
-  def update?
-    @consultation.mentor_id == user
   end
 end

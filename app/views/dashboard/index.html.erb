@@ -1,8 +1,11 @@
 <div class="container mt-5">
   <h1 class="title">Dashboard</h1>
-
-  <% if user_signed_in? %>
-  <% else %>
-  <p>Sorry you are not signed in- please sign in to see your consultations!</p>
+  <h2>Your appointment is on: </h2>
+  <% @consultations.each do |consultation| %>
+  <%= consultation.date.strftime("%B%d") %>
+  <h2>at:</h2>
+  <%= consultation.date.strftime("%I:%M%p") %>
+  <h2>And your appointment status is:</h2>
+  <%= consultation.confirmation %>
   <% end %>
 </div>
