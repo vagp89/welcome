@@ -14,6 +14,7 @@ class ConsultationsController < ApplicationController
     @consultation.user = current_user
     if @consultation.save
       redirect_to consultation_path
+
     else
       render :new
     end
