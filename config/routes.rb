@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'pages#components'
   devise_for :users
 
   resources :consultations, only: [:new, :create, :edit, :update, :show]
