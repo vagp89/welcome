@@ -1,37 +1,41 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: #FBFBFF;
+
+.menu {
+  font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+  text-decoration: none;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.nav-item {
-  font-size: 1.2em;
-}
-
-.navbar-icon {
-  color: #2E4057;
-  font-size: 1.5em;
-  position: relative;
-  left: 15px;
-  top: 8px;
-}
-
-.icon-w {
+.icon {
   color: #FAAA0A;
-  font-family: 'Rubik', sans-serif;
-  font-weight: bold;
-  font-size: 2em;
-  position: absolute;
+  font-size: 12px;
+  display: block;
+ 
+  
 }
 
-.icon-compass {
-  left: 22px;
-  top: 4px;
+ul .icon:hover {
+  opacity: 0.5;
+  
+}
+
+ul {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 280px;
+  width: 10%;
+  padding: 30;
+  text-align: left;
+  
+ }
+
+  .icon {
+  margin: 30px 0;  
+ 
+}
+
+.hint a:hover {
+  color: #FFF;
 }

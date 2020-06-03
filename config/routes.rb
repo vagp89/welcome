@@ -1,19 +1,18 @@
 Rails.application.routes.draw do
-  root to: 'pages#components'
-  devise_for :users
-
-  resources :consultations, only: [:new, :create, :edit, :update, :show]
-
-  resources :consultations, only: [:destroy] do
-    resources :reviews, only: [:new, :create]
+  devise_for :users do
+    resources :consultations, only: [:new, :create, :edit, :update, :show, :destroy] do
+      resources :reviews, only: [:new, :create]
+    end
   end
-
+  root to: 'pages#home'
+  get "components", to: 'pages#components'
+  
   resources :dashboard, only: [:index]
 
   resources :articles do
     resources :comments, only: [:new, :create]
   end
-end
+ end
 
 
 
