@@ -1,20 +1,25 @@
 class ConsultationsController < ApplicationController
   before_action :set_consultation, only: [:edit, :update, :destroy]
+  def index
+    @consultations = Consultation.all
+  end
 
   def show
     @consultation = Consultation.find(params[:id])
+    authorize @consultation
   end
 
   def new
     @consultation = Consultation.new
+    authorize @consultation
   end
 
   def create
     @consultation = Consultation.new(consultation_params)
-    @consultation.user = current_user
-    if @consultation.save
-      redirect_to consultation_path
-
+    authorize @consultation
+    @consultation.asker = current_user
+    if @consultation.save!
+      redirect_to dashboard_index_path
     else
       render :new
     end

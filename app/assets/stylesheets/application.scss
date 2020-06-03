@@ -12,22 +12,25 @@
 @import "components/index";
 @import "pages/index";
 
-body{
+body {
   font-family: 'Lato', sans-serif;
   background-color: #FBFBFF;
-}
-
-.btn-wel {
-  background-color: #2E4057;
-  color: #FBFBFF;
-  border-radius: 2px;
-  padding: 15px, 25px !important;
-}
-
-.btn-wel:hover {
-  color: #FAAA0A;
 }
 
  ul {
   list-style-type: none;
  }
+
+.lt {
+  opacity: 0.5 !important;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+.emp-y {
+  color: #FAAA0A;
+}

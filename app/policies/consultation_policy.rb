@@ -3,9 +3,21 @@ class ConsultationPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def update?
-      consultation.mentor == user
-    end
+  def new?
+    true
+  end
+
+  def create?
+    new?
+  end
+
+  def show?
+    true
+  end
+
+  def update?
+    @consultation.mentor_id == user
   end
 end
