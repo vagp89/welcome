@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     # Associate my review together with my article
     @comment.article = @article
+    @comment.user = current_user
     if @comment.save
       # success
       redirect_to article_path(@article)

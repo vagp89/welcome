@@ -5,14 +5,37 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-puts 'clean db'
-Consultation.destroy_all
-User.destroy_all
-puts 'db is now clean'
 
-user_one = User.create(username:'luis', email:"luis@example", first_name:"Luis", encrypted_password:"servicio")
-user_two = User.create(username:'carlos', email:"car@example", first_name:"carlos", encrypted_password:"servicio89")
+require 'faker'
 
-puts 'is created'
+puts 'Creating 10 fake users...'
+10.times do
+  user = User.new(
+    email: Faker::Internet.email,
+    password: "123456",
+    username: Faker::Superhero.name,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::GreekPhilosophers.name,
+    price: nil,
+    location: nil,
+    mentor: false
+  )
+  user.save!
+end
+puts 'Finished Users!'
 
-
+puts 'Creating 5 fake mentors...'
+5.times do
+  mentor = User.new(
+    email: Faker::Internet.email,
+    password: "123456",
+    username: Faker::Superhero.name,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::GreekPhilosophers.name,
+    price: rand(20..30),
+    location: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    mentor: true
+  )
+  mentor.save!
+end
+puts 'Finished Mentors!'

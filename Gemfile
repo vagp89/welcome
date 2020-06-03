@@ -21,6 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+#Use Pundit to authorize mentors as admins for booking consultations
+gem 'pundit'
+#Use Faker to generate fake Mentors and fake Users
+gem 'faker'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

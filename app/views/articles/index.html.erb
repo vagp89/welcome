@@ -1,4 +1,5 @@
 <div class="container mt-5">
+  <p><%= link_to "Add a new article", new_article_path %></p>
   <% unless @articles.empty? %>
     <ul>
       <% @articles.each do |article| %>

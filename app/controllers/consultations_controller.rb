@@ -13,7 +13,8 @@ class ConsultationsController < ApplicationController
     @consultation = Consultation.new(consultation_params)
     @consultation.user = current_user
     if @consultation.save
-      redirect_to  consultation_path
+      redirect_to consultation_path
+
     else
       render :new
     end
@@ -47,4 +48,3 @@ class ConsultationsController < ApplicationController
     params.require(:consultation).permit(:mentor_id, :asker_id, :date, :confirmation)
   end
 end
-
