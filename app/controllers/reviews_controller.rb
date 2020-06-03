@@ -1,4 +1,8 @@
 class ReviewsController < ApplicationController
+  def index
+    @reviews = Review.all
+  end
+
   def new
     @consultation = Consultation.find(params[:consultation_id])
     @review = Review.new
@@ -10,8 +14,7 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     authorize @review
     # review is only reached by consultation
-    @review.consultation = @consultation
-
+    @consultation.reviews << @review
     if @review.save
       # success
       redirect_to dashboard_index_path
@@ -24,6 +27,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :consultation_id)
   end
 end
