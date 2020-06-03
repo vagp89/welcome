@@ -2,11 +2,13 @@ class CommentsController < ApplicationController
   def new
     @article = Article.find(params[:article_id])
     @comment = Comment.new
+    authorize @comment
   end
 
   def create
     @article = Article.find(params[:article_id])
     @comment = Comment.new(comment_params)
+    authorize @comment
     # Associate my review together with my article
     @comment.article = @article
     @comment.user = current_user
