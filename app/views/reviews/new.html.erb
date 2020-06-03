@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <h1 class="title">Write a review for <%= @consultation.mentor_id %></h1>
 
-  <%= simple_form_for([@consulation, @review]) do |f| %>
+  <%= simple_form_for([@consultation, @review]) do |f| %>
     <%= f.input :content %>
     <%= f.input :rating %>
     <%= f.submit class: "btn btn-outline-primary btn-sm" %>
