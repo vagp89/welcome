@@ -48,6 +48,9 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 20px;
+  height: 320px;
+  position: sticky;
+  top: 0;
 }
 
 .sm-img {
@@ -82,9 +85,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 20px;
 }
+
 .card-article img {
   height: 180px;
-  width: 16em;
+  width: 100%;
   object-fit: cover;
   border-radius: 18px;
 }
