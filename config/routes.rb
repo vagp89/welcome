@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "components", to: 'pages#components'
   devise_for :users
-
+  resources :mentors
   resources :consultations, only: [:new, :create, :edit, :update, :show]
 
   resources :consultations, only: [:destroy] do
