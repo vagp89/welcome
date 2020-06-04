@@ -1,38 +1,36 @@
-<div class="container my-5">
-  <h2><%= @article.title %>
-    <span><%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_article_path %></span>
-    <span class="text-right"><%= link_to "<i class='far fa-trash-alt'></i>".html_safe,
-                                                    article_path(@article),
-                                                    method: :delete,
-                                                    data: { confirm: "Are you sure?" } %></span>
-  </h2>
-  <div class="border-top mt-3">
-      <p class="mt-3"><%= @article.content %></p>
-  </div>
-
+<div class= "container">
   <p class="pt-4"><%= link_to "Back to articles", articles_path %></p>
-  <p class="pt-4"><%= link_to "Write a comment", new_article_comment_path(@article) %></p>
-
-  <div class="row">
-  <div class="col-12">
-    <h2 class="title text-center my-5">Comments For <%= @article.title %></h2>
-      <ul>
-        <% @article.comments.each do |comment| %>
-          <li>
-            <div class="card my-3">
-              <div class="card-header">
-                <p>Comment:</p>
-              </div>
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p><%= comment.content %></p>
-                  <footer class="blockquote-footer"><%= @article.title %> Reader</footer>
-                </blockquote>
-              </div>
-            </div>
-          </li>
-        <% end %>
-      </ul>
+  <div class="container mt-5 d-flex justify-content-center align-items-center flex-column">
+    <div class="article-header">
+      <h2 class="title text-center mb-3"><%= @article.title %></h2>
+      <p class="text-center mb-5 font-weight-lighter"><span> <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="author avatar" class="avatar-square mr-1"></span>Written by User Name</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1551036746-04a04d0aaa22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" class="round">
+    </div>
+    <div class="mt-3 mb-3 article-body">
+        <p class="mt-3"><%= @article.content %></p>
+    </div>
+  </div>
+  <p class="text-right"><%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_article_path %></p>
+  <p class="text-right"><%= link_to "<i class='far fa-trash-alt'></i>".html_safe,
+                                                      article_path(@article),
+                                                      method: :delete,
+                                                      data: { confirm: "Are you sure?" } %></p>
+  <div class="article-header">
+    <div class="row">
+    <div class="col-12">
+      <p class="lt">COMMENTS</p>
+        <ul class="p-0">
+          <% @article.comments.each do |comment| %>
+            <li>
+              <p class="font-weight-bold mb-0">User Name<span class="lt ml-2">23/12/2019</span></p>
+              <p class="font-weight-lighter"><%= comment.content %></p>
+            </li>
+          <% end %>
+        </ul>
+        <p class="pt-4"><%= link_to "Write a comment", new_article_comment_path(@article) %></p>
+      </div>
     </div>
   </div>
 </div>
