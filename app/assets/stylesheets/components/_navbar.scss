@@ -35,3 +35,54 @@
   left: 22px;
   top: 4px;
 }
+
+
+
+/*navbar
+*/
+
+.menu {
+  font-family: 'open sans', 'lato', 'helvetica', sans-serif;
+  text-decoration: none;
+  
+  
+    
+  
+}
+.icon{
+  color: #FAAA0A;
+  font-size: 12px;
+  display: block;
+    
+}
+
+/*.icon:active{
+  color: blueviolet;
+
+
+
+}*/
+
+
+ul .icon:hover {
+  opacity: 0.5;
+}
+ul {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 280px;
+  width: 10%;
+  padding: 30;
+  text-align: left;
+  
+ }
+  .icon {
+  margin: 30px 0;  
+}
+.hint a:hover {
+  color: #FFF;
+}

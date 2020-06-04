@@ -13,8 +13,17 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+
     <%= render 'shared/flashes' %>
+    <div class ="row">
+      <div class = "col-md-3 col-lg-3">
+      <%= render 'shared/navbar' %>
+      </div>
+    
+    <div class = "col-md-9 col-lg-9">
     <%= yield %>
-</body>
+    </div>
+    </div>
+  </body>
+
 </html>
