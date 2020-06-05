@@ -1,3 +1,19 @@
+.navbar-homepage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  &-links {
+    display: flex;
+    align-items: center;
+    margin: 0 30px 0 0;
+    
+    li:not(:last-of-type) {
+      margin-right: 16px;
+    }
+  }
+}
 .navbar-lewagon {
   justify-content: space-between;
   background: #FBFBFF;
@@ -15,23 +31,3 @@
   font-size: 1.2em;
 }
 
-.navbar-icon {
-  color: #2E4057;
-  font-size: 1.5em;
-  position: relative;
-  left: 15px;
-  top: 8px;
-}
-
-.icon-w {
-  color: #FAAA0A;
-  font-family: 'Rubik', sans-serif;
-  font-weight: bold;
-  font-size: 2em;
-  position: absolute;
-}
-
-.icon-compass {
-  left: 22px;
-  top: 4px;
-}
