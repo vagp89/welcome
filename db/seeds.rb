@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'faker'
+require 'faker'
 
 # puts 'Creating 10 fake users...'
 # 5.times do
@@ -23,7 +23,7 @@
 # end
 # puts 'Finished Users!'
 
-puts 'Creating 5 fake mentors...'
+puts 'Creating 1 fake mentors...'
 1.times do
   mentor = User.create(
     email: Faker::Internet.email,
@@ -38,7 +38,7 @@ puts 'Creating 5 fake mentors...'
 end
 puts 'Finished Mentors!'
 
-puts 'Creating 5 fake mentors...'
+puts 'Creating 1 fake mentors...'
 1.times do
   mentor = User.create(
     email: Faker::Internet.email,
