@@ -16,6 +16,7 @@
 body {
   font-family: 'Lato', sans-serif;
   background-color: #FBFBFF;
+  link-decoration: none;
 }
 
  ul {
@@ -24,16 +25,6 @@ body {
 
 .lt {
   opacity: 0.5 !important;
-}
-
-.shadow {
-    -webkit-box-shadow: 0 10px 6px -6px #777;
-       -moz-box-shadow: 0 10px 6px -6px #777;
-            box-shadow: 0 10px 6px -6px #777;
-}
-
-.emp-y {
-  color: #FAAA0A;
 }
 
 .title {
@@ -46,4 +37,12 @@ body {
 
 .round {
   border-radius: 20px;
+}
+
+.emp {
+  color: $yellow;
+}
+
+.form-inline div {
+  display: inline-block
 }
