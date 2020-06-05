@@ -52,3 +52,11 @@ a {
 .form-inline div {
   display: inline-block
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: $blue;
+}

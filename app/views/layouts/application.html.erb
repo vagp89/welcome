@@ -12,16 +12,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <%= render 'shared/flashes' %>
-  <div class ="fluid-container">
+  <body>
+    <%= render 'shared/flashes' %>
+    <div class ="fluid-container">
 
-   <div class ="row">
-    <div class = "col-md-2 app-sidebar">
-      <%= render 'shared/sidebar' %>
-    </div>
-    <div class = "col-md-10 app-content mt-4">
-      <%= yield %>
+      <div class ="row">
+        <div class = "col-md-2 app-sidebar pr-0">
+          <%= render 'shared/sidebar' %>
+        </div>
+
+        <div class = "col-md-10 app-content mt-4 pl-0">
+          <%= yield %>
+        </div>
+     </div>
     </div>
   </div>
 </div>

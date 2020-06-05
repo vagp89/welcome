@@ -1,9 +1,9 @@
-<div class="index-container pl-2 pr-2">
+<div class="index-container">
   <div class="d-flex">
-    <div class="row col-sm-12 col-md-8" style="justify-content: space-around;">
+    <div class="row col-sm-12 col-md-8 px-0" style="justify-content: space-center;">
       <% @articles.each do |article| %>
-      <div class="card-article m-1" style="width: 14rem;">
-        <div class="p-3">
+      <div class="card-article m-1" style="width: 13rem;">
+        <div class="p-2">
           <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" >
         </div>
         <div class="card-article-infos">
@@ -12,6 +12,7 @@
             <p class="mb-3 lt">written by RuPaul on 12/20/19</p>
             <p class="pt-1 pb-4"><%= article.content %></p>
             <button class="c-btn"><%= link_to "Read article", article_path(article) %></button>
+            </div>
           </div>
         </div>
       </div>
@@ -21,7 +22,7 @@
         <div class="searchbar">
           <%= simple_form_for :search, url: root_path, method: :get do |f| %>
           <div class="search-form-control form-group" style="width: 100%;">
-            <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" />
+            <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search articles" />
             <button name="button" type="submit" class="btn btn-flat">
               <i class="fas fa-search search-icon"></i>
             </button>
@@ -57,15 +58,20 @@
                 <div>
                   <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
+                <div>
+                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                </div>
               </div>
             </div>
-            <div class="d-flex justify-content-center mt-2">
-              <button class="c-btn"><%= link_to "find your mentor", mentors_path %></button>
+            <div class="d-flex justify-content-center mt-4">
+              <button class="c-btn"><%= link_to "Find your mentor", mentors_path %></button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-<%= link_to "Add a new article", new_article_path, class: "m-btn" %>
+  <div class="d-flex justify-content-end m-5">
+  <%= link_to "Add a new article", new_article_path, class: "c-btn" %>
+  </div>
 </div>
