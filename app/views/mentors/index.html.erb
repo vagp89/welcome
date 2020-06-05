@@ -1,19 +1,19 @@
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-7">
-      <h2 class="pb-1" style="margin-top: 25px; margin-left: 120px;">Search results mentors in Berlin</h2>
-      <div class="card-deck" style="margin-left: 120px; margin-top: 10px;">
+  <div class="row mx-lg-n5">
+    <div class="col-7 " style="padding-right: 10px; margin-right: -55px;">
+      <h2 class="pb-1" style="margin-top: 80px; margin-left: 30px;">Search results mentors in Berlin</h2>
+      <div class="card-deck" style="margin-left: 9px; margin-top: 9px; margin-right: 20px">
         <% @mentors.each do |user| -%>
-        <div  id="mentor-card" class="card-trip" style="width: 16rem; height: 24rem;">
+        <div   class="card-trip" style="width: 15rem; height: 23rem; margin-right: 24px; margin-bottom: 23px; ">
           <div class="p-3">
-            <img id="card-img"class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
+            <img class="card-img" style="height: 137px; width: 13rem; margin-bottom: 23px;" 16rem;class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
           </div>
           <div id="card-info" class="card-trip-infos" style="margin-top: -30px;">
             <div>
-              <h2 class="pb-1">user.username</h2>
-              <p style="margin-bottom: 10px;">Muffin cupcake jelly jelly-o oat cake. Sesame snaps topping tiramisu pudding carrot cake. Soufflé liquorice lollipop chocolate bar chocolate cake croissant. Halvah sugar plum ice cream fruitcake lemon drops wafer. </p>
-              <button id="mentor-btn d-flex align-items-center"class="c-btn"> link_to View mentor_path </button>
+              <h2 class="pb-1"><%= user.first_name %> <%= user.last_name %></h2>
+              <p style="margin-bottom: 10px;">AKA: <%= user.username %>,  <%= user.first_name %> <%= user.last_name %> has lived in Berlin for 5 years, and is originally from the UK. Interests include windsurfing, rollerblading, and of course, cats. Ich spreche Deutsch!</p>
+              <button class="btn m-btn">View Mentor<% link_to "View Mentor", mentors_path %> </button>
             </div>
           </div>
         </div>
@@ -21,9 +21,9 @@
       </div>
     </div>
 
-    <div class="col-5">
+    <div class="col-5 ml">
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group" style="width:33rem; margin-left:90px ">
+      <div class="search-form-control form-group" style="margin-right: -4px;margin-left: 60px; ">
         <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" />
         <button name="button" type="submit" class="btn btn-flat">
           <i class="fas fa-search search-icon"></i>
@@ -31,11 +31,10 @@
       </div>
       <% end %>
       <div id="map"
-      style="width: 100%; height: 800px; "
+      style="width: 110%; height: 1000px; "
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
     </div>
   </div>
 </div>
-
 
