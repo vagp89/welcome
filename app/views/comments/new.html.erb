@@ -1,13 +1,18 @@
 <div class="container mt-5">
-  <h1 class="title font-weight-lighter">Write a comment:</h1>
+  <h1 class="title d-flex justify-content-center font-weight-lighter">Write a comment:</h1>
 
   <%= simple_form_for([@article, @comment]) do |f| %>
     <%= f.input :content %>
+    <div class="d-flex justify-content-center">
     <%= f.submit class: "m-btn" %>
-  <% end %>
+    </div>
 
-  <div class= "mt-3">
+  <% end %>
+  
+  <div class= "d-flex justify-content-center mt-3">
+  
     <%= link_to 'Back', article_path(@article) %>
+  
   </div>
 </div>
 <!-- btn btn-outline-primary btn-sm
