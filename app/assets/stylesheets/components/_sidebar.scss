@@ -10,7 +10,7 @@
 
 
 .icon-w {
-    color: #FAAA0A;
+    color: $yellow;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
     font-size: 2em;
@@ -47,8 +47,9 @@
   }
 
   .nav-item {
-    color: $blue;
+    color: $yellow;
     font-size: 14px;
+    font-family: 'Lato', sans-serif;
   }
 
   /*.icon:active{
@@ -60,7 +61,7 @@
 
 
   ul .icon:hover {
-    opacity: 0.5;
+    color: $blue;
   }
   .sidebar-list {
     margin: 60px 0 0 0;
@@ -72,4 +73,12 @@
   }
   .hint a:hover {
     color: #FFF;
+  }
+
+  .side-nav-i {
+    color: $blue;
+  }
+
+  .side-nav-i:hover {
+    color: $yellow;
   }
