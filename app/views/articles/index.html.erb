@@ -4,13 +4,13 @@
       <% @articles.each do |article| %>
       <div class="card-article m-1" style="width: 14rem;">
         <div class="p-3">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" >
+          <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" >
         </div>
         <div class="card-article-infos">
           <div>
-            <h2 class="pb-1">Explore Berlin</h2>
-            <p class="mb-3 lt">published on 12/20/19</p>
-            <p class="pt-1 pb-4">Muffin cupcake jelly jelly-o oat cake. Sesame snaps topping tiramisu pudding carrot cake. Soufflé  liquorice lollipop chocolate bar chocolate cake croissant. Halvah sugar plum ice cream fruitcake lemon drops wafer. </p>
+            <h2 class="pb-1"><%= article.title %></h2>
+            <p class="mb-3 lt">written by RuPaul on 12/20/19</p>
+            <p class="pt-1 pb-4"><%= article.content %></p>
             <button class="c-btn"><%= link_to "Read article", article_path(article) %></button>
           </div>
         </div>
@@ -29,7 +29,7 @@
         <% end %>
         </div>
         <div class="card-add" style="width: 100%;">
-          <h2 class="pb-1 text-center">Book a <span class="emp-y">free</span> consultation with a mentor in <span class="emp-y">Berlin</span></h2>
+          <h2 class="pb-1 text-center">Book a <span class="emp">free</span> consultation with a mentor in <span class="emp-y">Berlin</span></h2>
           <div class="card-add-infos">
             <div class="container">
               <div class="row">
@@ -37,25 +37,25 @@
                   <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1482849297070-f4fae2173efe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1519419691348-3b3433c4c20e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
                 <div>
-                  <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" class="sm-img">
+                  <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" class="sm-img">
                 </div>
               </div>
             </div>
@@ -67,5 +67,5 @@
       </div>
     </div>
 
-<%= link_to "Add a new article", new_article_path, class: "c-btn" %>
+<%= link_to "Add a new article", new_article_path, class: "m-btn" %>
 </div>
