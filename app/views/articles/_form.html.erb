@@ -1,5 +1,9 @@
 <%= simple_form_for(@article) do |f| %>
   <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.submit "Create Article", class: "m-btn"%>
+
+  <%= f.input :content, as: :text %>
+  <%= f.submit "Add Article", class: "m-btn" %>
+
 <% end %>
+
+

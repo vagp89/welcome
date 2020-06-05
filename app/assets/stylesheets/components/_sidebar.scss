@@ -1,0 +1,66 @@
+.navbar-icon {
+    color: #2E4057;
+    font-size: 1.5em;
+    position: relative;
+    left: 15px;
+    top: 8px;
+  }
+  
+
+
+
+.icon-w {
+    color: #FAAA0A;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    position: absolute;
+    left: 38px;
+  }
+  
+  .icon-compass {
+    left: 54px;
+    top: 25px;
+    position: absolute;
+  }
+  
+  
+  
+  /*navbar
+  */
+  
+  .menu {
+    font-family: 'Rubik', sans-serif;;
+    text-decoration: none;
+    
+      
+  }
+  .icon{
+    color: #FAAA0A;
+    font-size: 12px;
+    display: block;
+      
+  }
+  
+  /*.icon:active{
+    color: blueviolet;
+  
+  text-align: left;
+  
+  }*/
+  
+  
+  ul .icon:hover {
+    opacity: 0.5;
+  }
+  .sidebar-list {
+    margin: 60px 0 0 0;
+    text-align: left;  
+  }
+  
+  .icon {
+    margin: 30px 0;  
+  }
+  .hint a:hover {
+    color: #FFF;
+  }

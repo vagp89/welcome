@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h1 class="title">Write a comment for <%= @article.title %></h1>
+  <h1 class="title font-weight-lighter">Write a comment:</h1>
 
   <%= simple_form_for([@article, @comment]) do |f| %>
     <%= f.input :content %>
