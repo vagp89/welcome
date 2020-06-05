@@ -3,10 +3,13 @@
 
   <%= simple_form_for([@article, @comment]) do |f| %>
     <%= f.input :content %>
-    <%= f.submit class: "btn btn-outline-primary btn-sm" %>
+    <%= f.submit class: "m-btn" %>
   <% end %>
 
   <div class= "mt-3">
-    <%= link_to 'Back', article_path(@article), class: "btn btn-outline-primary btn-sm" %>
+    <%= link_to 'Back', article_path(@article) %>
   </div>
 </div>
+<!-- btn btn-outline-primary btn-sm
+btn btn-outline-primary btn-sm
+-->
