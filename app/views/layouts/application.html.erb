@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Welcome</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Rubik:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
-  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300&family=Rubik:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,900;1,500&display=swap" rel="stylesheet">
+</head>
 
-  <body>
-    <%= render 'shared/flashes' %>
-    <div class ="fluid-container">
-    
-      <div class ="row">
-        <div class = "col-md-3 col-lg-3 app-sidebar" style="position: fixed;">
-          <%= render 'shared/sidebar' %>
-        </div>
-    
-        <div class = "col-md-9 col-lg-9 app-content" style="padding-left: 260px;">
-          <%= yield %>
-        </div>
-     </div>   
+<body>
+  <%= render 'shared/flashes' %>
+  <div class ="fluid-container">
+
+   <div class ="row">
+    <div class = "col-md-2 app-sidebar">
+      <%= render 'shared/sidebar' %>
     </div>
+    <div class = "col-md-10 app-content mt-4">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
-  </body>
+</body>
 
 </html>
