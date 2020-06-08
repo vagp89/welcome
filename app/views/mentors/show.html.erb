@@ -3,35 +3,54 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm">
-      <img class="card-image" style="width: 24rem; height: 650px; border-radius: 18px; margin-top: 78px;"class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
+      <p class="pt-4"><%= link_to "Back to mentors", mentors_path %></p>
+      <img class="card-image" style="width: 24rem; height: 650px; border-radius: 18px; margin-top: 25px;"class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
     </div>
     <div class="col-sm">
 
       <div class="card-mentor" style="width: 27rem; margin-top: 78px;">
-        <div class="card-body">
-          <h2 class="card-title">Patricia Smith</h2>
-          <h5 class="card-title">Tax Prep Checklist</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Everything You Need to File Your Taxes</h6>
-          <p class="card-text justi">Form W-2 Wage and Tax Statement -Your W-2 shows how much you earned and how much was withheld for taxes. Your employer has until February to send you your form. If you haven’t received yours, go ahead and request it.
+        <div class="card-body" style="margin-left: -43px;">
+          <h2 class="pb-1" style="font-size: 25px;";><%= @mentor.first_name %> <%= @mentor.last_name %></h2>
+          <h6 class="card-subtitle mb-2 text-muted" >reviews</h6>
+          <p class= "text-justify" style="margin-right: -57px;">Form W-2 Wage and Tax Statement -Your W-2 shows how much you earned and how much was withheld for taxes. Your employer has until February to send you your form. If you haven’t received yours, go ahead and request it.
             Bank or financial institution statements – Did you make contributions to an IRA? You’ll need a Form 5498. Are you paying down student loan debt? Be sure to grab your Form 1098-E. Did you take out a home mortgage? Be sure to have your Form 1098 Mortgage Interest Statement.
             Last year’s state refund amount – If you itemize your deductions, then your state refund is considered income for tax purposes.
             Other miscellaneous income records – This could include award money, gambling winnings, lottery pay-outs, etc.
           Any (and all) Form 1099s – There are several different types of 1099. Some of the common ones include</p>
+        </div>
+      </div>
 
-          <div class="card-review" style="width: 24rem;">
-            <div class="card-body">
-              <h5 class="card-title">Reviews</h5>
-              <p class="card-text">She's an incredible mentor and really helped me with my taxes. Highly recommend!</p>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Reviews</h5>
-              <p class="card-text">She's an incredible mentor and really helped me with my taxes. Highly recommend!</p>
+
+    </div>
+    <div class="col-sm">
+      <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
+      <div class="search-form-control form-group" style= style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
+        <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: 25px;" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search search-icon"></i>
+        </button>
+      </div>
+      <% end %>
+
+      <div class="card-add" style="width: 65%; height: 40%; margin-top: 34px;margin-left: 63px;">
+        <div class="card-add-infos">
+          <div class="container">
+            <div class="row">
+              <div>
+               <p class="pt-4">Date</p>
+               <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+             </div>
+             <div>
+              <p style="margin-top: 10px;">Time</p>
+              <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
             </div>
           </div>
         </div>
+        <div class="d-flex justify-content-center mt-4">
+          <button class="c-btn"><%= link_to "Book a meeting", new_consultation_path %></button>
+        </div>
       </div>
     </div>
-    <div class="col-sm">col-sm</div>
-
   </div>
+</div>
 </div>

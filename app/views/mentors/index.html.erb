@@ -5,22 +5,21 @@
       <h2 class="pb-1" style="margin-top: 80px; margin-left: 30px;">Search results mentors in Berlin</h2>
       <div class="card-deck" style="margin-left: 9px; margin-top: 9px; margin-right: 20px">
         <% @mentors.each do |user| -%>
-        <div   class="card-trip" style="width: 15rem; height: 23rem; margin-right: 24px; margin-bottom: 23px; ">
+        <div class="card-trip" style="width: 15rem; height: 23rem; margin-right: 24px; margin-bottom: 23px; ">
           <div class="p-3">
             <img class="card-img" style="height: 137px; width: 13rem; margin-bottom: 23px;" 16rem;class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
           </div>
           <div id="card-info" class="card-trip-infos" style="margin-top: -30px;">
             <div>
-              <h2 class="pb-1" style="font-size: 16px;";><%= user.first_name %> <%= user.last_name %></h2>
-              <p style="margin-bottom: 10px;">AKA: <%= user.username %>,  <%= user.first_name %> <%= user.last_name %> has lived in Berlin for 5 years, and is originally from the UK. Interests include windsurfing, rollerblading, and of course, cats. Ich spreche Deutsch!</p>
-              <button class="btn c-btn">View Mentor<% link_to "View Mentor", mentors_path %> </button>
+              <h1 class="pb-1" style="font-size: 20px;";><%= user.first_name %> <%= user.last_name %></h1>
+              <p style="margin-bottom: 10px;">AKA: <%= user.username %>,  <%= user.first_name %> <%= user.last_name %></p>
+               <%= link_to "View Mentor",  mentor_path(user), class:"btn c-btn" %>
             </div>
           </div>
         </div>
         <% end -%>
       </div>
     </div>
-
     <div class="col-5 ml">
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
       <div class="search-form-control form-group" style="margin-right: -4px;margin-left: 60px; ">

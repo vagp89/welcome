@@ -1,7 +1,8 @@
 <%= simple_form_for(@article) do |f| %>
   <%= f.input :title %>
-
+  <%= f.input :summary %>
   <%= f.input :content, as: :text %>
+  <%= f.input :photo, as: :file %>
     <div class = "d-flex justify-content-center">
       <%= f.submit "Add Article", class: "m-btn" %>
     </div>

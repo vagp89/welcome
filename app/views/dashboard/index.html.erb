@@ -13,6 +13,7 @@
   </div>
   
   <% @consultations.each do |consultation| %>
+
    <div class="dashboard-card">
     <div class="p-3 d-flex justify-content-around"> 
       <h2><%= consultation.mentor_id %></h2>
@@ -20,8 +21,7 @@
       <h2><%= consultation.date.strftime("%I:%M%p") %></h2>
       <h2><%= consultation.confirmation %></h2>
     </div>
-  </div>
-       
+  </div>    
       
 <% end %>
   </div>
@@ -29,20 +29,16 @@
 
 </div>
 
+  <%= consultation.date.strftime("%B%d") %>
+  <h2>at:</h2>
+  <%= consultation.date.strftime("%I:%M%p") %>
+  <h2>And your appointment status is:</h2>
+  <%= consultation.confirmation %>
+  <% end %>
+
+  <li class="icon fa fa-square" ><%= link_to "Messages", chatroom_path(@chatroom), class: "p-2 nav-item"%></li>
 
 
-
-
-
-
-
-
-
-
-<!--<div class="container mt-5">
-  <div class= "d-flex ">
-    <h1 class="title" style="color:#FAAA0A" >Dashboard</h1>
-  </div> 
 </div>
 <div class="container mt-5 d-flex justify-content-between"> 
   <h2>Date</h2>
