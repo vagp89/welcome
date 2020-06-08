@@ -9,5 +9,8 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :consultations_as_asker, source: :consultations, foreign_key: :asker_id
   has_many :consultations_as_mentor, source: :consultations, foreign_key: :mentor_id
+  has_many :messages
+  has_many :chatrooms, through: :messages
   has_one_attached :photo
+ 
 end

@@ -3,6 +3,7 @@
   <div class="container mt-5 d-flex justify-content-center align-items-center flex-column">
     <div class="article-header">
       <h2 class="title text-center mb-3"><%= @article.title %></h2>
+      <p class="text-center font-weight-lighter"><%= @article.summary %></p>
       <p class="text-center mb-5 font-weight-lighter"><span> <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="author avatar" class="avatar-square mr-1"></span>Written by Ally Schue</p>
     </div>
     <div>
@@ -14,15 +15,17 @@
       <div>
         <%= simple_form_for(@article, :html => {:class => 'login-form' }) do |f| %>
         <h2 class="title">Book a <span class="emp">free</span> consultation with Ally now</h2>
+        <div class="d-flex justify-content-center">
         <%= f.submit "Book a meeting with Ally", class: "c-btn ml-2" %>
+        </div>
         <% end %>
       </div>
   </div>
-  <p class="text-right"><%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_article_path %></p>
+  <p class="text-right"><%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_article_path, class: "yellow-link" %></p>
   <p class="text-right"><%= link_to "<i class='far fa-trash-alt'></i>".html_safe,
                                                       article_path(@article),
                                                       method: :delete,
-                                                      data: { confirm: "Are you sure?" } %></p>
+                                                      data: { confirm: "Are you sure?" }, class: "yellow-link" %></p>
   <div class="article-header">
     <div class="row">
     <div class="col-12">

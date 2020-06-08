@@ -21,16 +21,17 @@ body {
   link-decoration: none;
 }
 
-a {
-  color: white;
-}
-
  ul {
   list-style-type: none;
  }
 
 .lt {
   opacity: 0.5 !important;
+}
+
+.dropdown-item:hover {
+  color: $blue !important;
+  background-color: transparent !important;
 }
 
 .title {
@@ -58,5 +59,13 @@ a {
 }
 
 a:hover {
+  color: $blue;
+}
+
+.yellow-link {
+  color: $yellow;
+}
+
+.yellow-link:hover {
   color: $blue;
 }

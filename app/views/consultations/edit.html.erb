@@ -1,11 +1,11 @@
 <div class="container mt-5">
   <%= simple_form_for [ @consultation] do |f| %>
-  <%= f.submit "Edit consultation", class: "btn btn-outline-primary" %>
+  <%= f.submit "Edit consultation", class: "m-btn" %>
   <% end %>
   <%= link_to "Delete this consultation",
   user_path(@consultation),
   method: :delete,
-  data: { confirm: "Are you sure?" }, class: "btn btn-outline-primary btn-sm mt-3" %>
+  data: { confirm: "Are you sure?" }, class: "m-btn" %>
   <div>
 
   <% @consultations.each do |consultation| %>
@@ -15,9 +15,9 @@
 
 <% end %>
   <div class = "d-flex justify-content-center">
-    <%= link_to 'Back', users_path, class: "btn btn-outline-primary btn-sm mt-3"%>
+    <%= link_to 'Back', users_path, class: "yellow-link"%>
   </div>
   </div>
-  
+
 </div>
 
