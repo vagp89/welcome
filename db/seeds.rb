@@ -9,6 +9,7 @@
 require 'faker'
 
 Article.destroy_all
+Review.destroy_all
 
 puts 'Creating 5 fake users...'
 5.times do
@@ -20,13 +21,13 @@ puts 'Creating 5 fake users...'
     last_name: Faker::Name.last_name,
     price: nil,
     address: nil,
-    mentor: false
+    mentor: false,
+    description: "Just a regular old user"
   )
 end
 puts 'Finished Users!'
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -35,12 +36,15 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Prinzessinnenstraße 21 10969 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
+
+puts 'Finished Mentors!'
+
+
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -49,12 +53,11 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Lietzenseeufer 5, 14057 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -63,12 +66,11 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Bürknertraße 6, 12047 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -77,12 +79,11 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Schivelbeinerstraße 34, 10439 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -91,12 +92,11 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
 
 puts 'Creating 1 fake mentor...'
-1.times do
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -105,9 +105,9 @@ puts 'Creating 1 fake mentor...'
     last_name: Faker::Name.last_name,
     price: rand(20..30),
     address: "Sonnenallee 76, 12045 Berlin",
-    mentor: true
+    mentor: true,
+    description: Faker::Marketing.buzzwords
   )
-end
 
 puts 'Finished Mentors!'
 
@@ -164,6 +164,7 @@ end
 puts 'Creating 1 fake article...'
 1.times do
   article = Article.create(
+
     user_id: rand(1..5),
     title: "Work Life Balance, and What to Expect",
     summary: "Tired of a 40 hour work week? Well welcome to Germany- where the average work week is 35 and the breaks are mandatory.",
@@ -182,3 +183,34 @@ puts 'Creating 1 fake article...'
 end
 
 puts 'Finished Articles!'
+
+puts 'Creating 5 reviews...'
+  review = Review.create(
+    consultation_id: rand(1..20),
+    rating: 4,
+    content: "<%= @user.first_name %> was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without <%= @user.first_name %>!"
+  )
+
+  review = Review.create(
+    consultation_id: rand(1..20),
+    rating: 5,
+    content: "10/10 can't recommend WELCOME enough! Their friendly mentors helped me so much when I was a stranger to the city!"
+  )
+
+  review = Review.create(
+    consultation_id: rand(1..20),
+    rating: 5,
+    content: "Thank you for helping me get my taxes together under a crazy deadline in a language I don't speak yet! Couldn't have done it without my wonderful mentor, <%= @user.first_name %>."
+  )
+
+  review = Review.create(
+    consultation_id: rand(1..20),
+    rating: 3,
+    content: "The service was useful, but my mentor didn't know enough about my country of origin's exit requirements so their suggestions weren't super helpful. I think next time I'll just have to rely on Google or a friend."
+  )
+
+  review = Review.create(
+    consultation_id: rand(1..20),
+    rating: 4,
+    content: "Trust the pros at Welcome! I couldn't have done it without you, THANK YOU!!!"
+  )
