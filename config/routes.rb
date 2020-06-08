@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments, only: [:new, :create]
   end
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
 
 
