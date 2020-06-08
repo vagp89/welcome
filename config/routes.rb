@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'pages#components'
   get "components", to: 'pages#components'
   devise_for :users
   resources :mentors
