@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_06_08_081605) do
 
   # These are extensions that must be enabled in order to support this database
@@ -23,6 +24,12 @@ ActiveRecord::Schema.define(version: 2020_06_08_081605) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "summary"
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -44,6 +51,16 @@ ActiveRecord::Schema.define(version: 2020_06_08_081605) do
     t.string "confirmation", default: "pending"
     t.index ["asker_id"], name: "index_consultations_on_asker_id"
     t.index ["mentor_id"], name: "index_consultations_on_mentor_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -82,5 +99,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_081605) do
   add_foreign_key "comments", "users"
   add_foreign_key "consultations", "users", column: "asker_id"
   add_foreign_key "consultations", "users", column: "mentor_id"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "reviews", "consultations", column: "asker_id"
 end
