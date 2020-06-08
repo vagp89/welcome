@@ -4,10 +4,10 @@
   <%= simple_form_for([@consultation, @review]) do |f| %>
     <%= f.input :content %>
     <%= f.input :rating %>
-    <%= f.submit class: "btn btn-outline-primary btn-sm" %>
+    <%= f.submit class: "btn btn-primary" %>
   <% end %>
 
   <div class= "mt-3">
-    <%= link_to 'Back', dashboard_index_path, class: "btn btn-outline-primary btn-sm" %>
+    <%= link_to 'Back', dashboard_index_path, class: "yellow-link" %>
   </div>
 </div>
