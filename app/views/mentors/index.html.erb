@@ -7,13 +7,13 @@
         <% @mentors.each do |user| -%>
         <div class="card-trip" style="width: 15rem; height: 23rem; margin-right: 24px; margin-bottom: 23px; ">
           <div class="p-3">
-            <img class="card-img" style="height: 137px; width: 13rem; margin-bottom: 23px;" 16rem;class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
+            <%= cl_image_tag user.photo.key, class: "rounded card-img shadow" %>
           </div>
           <div id="card-info" class="card-trip-infos" style="margin-top: -30px;">
             <div>
               <h1 class="pb-1" style="font-size: 20px;";><%= user.first_name %> <%= user.last_name %></h1>
-              <p style="margin-bottom: 10px;">AKA: <%= user.username %>,  <%= user.first_name %> <%= user.last_name %></p>
-               <%= link_to "View Mentor",  mentor_path(user), class:"btn c-btn" %>
+              <p style="margin-bottom: 10px;"><%= user.description %></p>
+               <%= link_to "View Mentor",  mentor_path(user), class: "btn c-btn" %>
             </div>
           </div>
         </div>

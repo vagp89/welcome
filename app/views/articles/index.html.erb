@@ -4,7 +4,7 @@
       <% @articles.each do |article| %>
         <div class="card-article m-1" style="width: 13rem;">
         <div class="p-2">
-          <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" >
+          <%= cl_image_tag article.photo.key, class: "rounded" %>
         </div>
         <div class="card-article-infos">
           <div>
