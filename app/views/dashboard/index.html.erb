@@ -1,69 +1,27 @@
-
-
 <div class="container-fluid">
- <h1 class="title" style="color:#FAAA0A" >Dashboard</h1>
-<div>
-  
-  <div class="content" style="width: 100%" >
-    <div class="p-3 mt-5 d-flex justify-content-around"> 
-      <h2>Mentor</h2>
-      <h2>Date</h2>
-      <h2>Time</h2>
-      <h2>Status</h2>
-  </div>
-  
-  <% @consultations.each do |consultation| %>
-
-   <div class="dashboard-card">
-    <div class="p-3 d-flex justify-content-around"> 
-      <h2><%= consultation.mentor_id %></h2>
-      <h2><%= consultation.date.strftime("%B%d") %></h2>
-      <h2><%= consultation.date.strftime("%I:%M%p") %></h2>
-      <h2><%= consultation.confirmation %></h2>
-    </div>
-  </div>    
-      
-<% end %>
-  </div>
-</div>
-
-</div>
-
-  <%= consultation.date.strftime("%B%d") %>
-  <h2>at:</h2>
-  <%= consultation.date.strftime("%I:%M%p") %>
-  <h2>And your appointment status is:</h2>
-  <%= consultation.confirmation %>
-  <% end %>
-
-  <li class="icon fa fa-square" ><%= link_to "Messages", chatroom_path(@chatroom), class: "p-2 nav-item"%></li>
-
-
-</div>
-<div class="container mt-5 d-flex justify-content-between"> 
-  <h2>Date</h2>
-  <h2>Time</h2>
-  <h2>Status</h2>
-  <h2>Mentor</h2>
-</div>
-
-
-  <div class="card-add-db"> 
-   <div class= "d-flex justify-content-between" style="color:#FAAA0A"> 
+  <h1 class="title" style="color:#FAAA0A" >Dashboard</h1>
+  <div>
+    <div class="content" style="width: 100%" >
+      <div class="p-3 mt-5 d-flex justify-content-around" style="margin-left: 17px;">
+        <h2 style="flex: 1;">Mentor</h2>
+        <h2 style="flex: 1;">Date</h2>
+        <h2 style="flex: 1;">Time</h2>
+        <h2 style="flex: 1;">Status</h2>
+      </div>
     <% @consultations.each do |consultation| %>
-   
-        <%= consultation.date.strftime("%B%d") %>       
-        <%= consultation.date.strftime("%I:%M%p") %>
+    <div class="dashboard-card">
+      <div class="p-3 d-flex justify-content-around">
+        <h2 style="flex: 1;"><%= consultation.mentor.first_name %></h2>
+        <h2 style="flex: 1;"><%= consultation.date.strftime("%B%d") %></h2>
+        <h2 style="flex: 1;"><%= consultation.date.strftime("%I:%M%p") %></h2>
+        <h2 style="flex: 1;"><%= consultation.confirmation %></h2>
+      </div>
+      
     </div>
-  </div>
-
-  <div class="card-add-db d-flex justify-content-between"> 
+    <% end %>
+    
+    </div>
     
   </div>
-  
 
-  
-  
-  
-  <% end %>
-</div>-->
+</div>
