@@ -4,7 +4,7 @@
     <div class="article-header">
       <h2 class="title text-center mb-3"><%= @article.title %></h2>
       <p class="text-center font-weight-lighter"><%= @article.summary %></p>
-      <p class="text-center mb-5 font-weight-lighter"><span> <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="author avatar" class="avatar-square mr-1"></span>Written by Ally Schue</p>
+      <p class="text-center mb-5 font-weight-lighter"><%= cl_image_tag @article.user.photo.key, class: "rounded sm-img" %>Written by <%= @article.user.first_name %> <%= @article.user.last_name %></p>
     </div>
     <div>
       <%= cl_image_tag @article.photo.key, class: "rounded" %>
@@ -14,9 +14,9 @@
     </div>
       <div>
         <%= simple_form_for(@article, :html => {:class => 'login-form' }) do |f| %>
-        <h2 class="title">Book a <span class="emp">free</span> consultation with Ally now</h2>
+        <h2 class="title">Book a <span class="emp">free</span> consultation with <%= @article.user.first_name %> now!</h2>
         <div class="d-flex justify-content-center">
-        <li class="btn c-btn"><%= link_to "Book a meeting with Ally", new_consultation_path %></li>
+        <li class="btn c-btn"><%= link_to "Book a meeting now!", edit_consultation_path %></li>
         </div>
         <% end %>
       </div>
@@ -33,7 +33,7 @@
         <ul class="p-0">
           <% @article.comments.each do |comment| %>
             <li class="my-4">
-              <p class="font-weight-bold mb-0">Anna<span class="lt ml-2">23/12/2019</span></p>
+              <p class="font-weight-bold mb-0"><%= comment.user.first_name %><span class="lt ml-2"><%= comment.created_at.strftime("%B %d") %></span></p>
               <p class="font-weight-lighter"><%= comment.content %></p>
             </li>
           <% end %>

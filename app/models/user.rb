@@ -13,6 +13,4 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :messages
   has_one_attached :photo
   
-  # has_one_attached :photo:avatar
- 
 end

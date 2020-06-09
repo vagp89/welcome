@@ -1,24 +1,22 @@
-
-
 <div class="container">
-  <p class="pt-4" style="margin-left: -108px;margin-top: 0px;"><%= link_to "Back to mentors", mentors_path, class: "yellow-link" %></p>
+  <p class="pt-4 pl-5" style="margin-left: -108px;margin-top: 0px;"><%= link_to "Back to mentors", mentors_path, class: "yellow-link" %></p>
   <div class="row">
     <div class="col-md-7">
-     <h1 class="title d-flex justify-content-center" style="margin-left: -76px;">MENTOR'S PROFILE</h1>
-     <img class="card-image " style="width: 30rem; height: 350px; border-radius: 18px; margin-top: 42px;margin-left: 39px;"class="shadow" src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" >
-     <div class="card-mentor" style="width: 27rem; margin-top: 30px;">
-      <div class="card-body " style="margin-left: -43px;">
-        <h2 class="pb-1" style="font-size: 25px;margin-left: 57px;margin-right: 8px;margin-top: -10px;margin-bottom: 2.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %></h2>
-        <% @reviews.each do |review| %>
-        <p class="font-weight-lighter"><%= review.rating.to_i.times do%>
-          <span class="⭐️"></span>
+      <div class="d-flex justify-content-center">
+        <h1 class="title" style="margin-left: -76px;"><span class="emp">MENTOR'S </span>PROFILE</h1>
+      </div>
+      <div>
+        <%= cl_image_tag @mentor.photo.key, class: "rounded card-image shadow" %>
+      </div>
+      <div class="card-mentor" style="width: 27rem; margin-top: 30px;">
+        <div class="card-body " style="margin-left: -43px;">
+          <h2 class="pb-1 title" style="font-size: 25px;margin-left: 57px;margin-right: 8px;margin-top: -10px;margin-bottom: 2.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
+          <% @reviews.each do |review| %>
+            <p class="font-weight-lighter"><%= review.rating.to_i.times do%>
+              <span class="⭐️"></span>
+            <% end %>
           <% end %>
-          <% end %>
-          <p class= "text-justify" style="margin-right: -107px;margin-left: 62px;">Form W-2 Wage and Tax Statement -Your W-2 shows how much you earned and how much was withheld for taxes. Your employer has until February to send you your form. If you haven’t received yours, go ahead and request it.
-            Bank or financial institution statements – Did you make contributions to an IRA? You’ll need a Form 5498. Are you paying down student loan debt? Be sure to grab your Form 1098-E. Did you take out a home mortgage? Be sure to have your Form 1098 Mortgage Interest Statement.
-            Last year’s state refund amount – If you itemize your deductions, then your state refund is considered income for tax purposes.
-            Other miscellaneous income records – This could include award money, gambling winnings, lottery pay-outs, etc.
-          Any (and all) Form 1099s – There are several different types of 1099. Some of the common ones include</p>
+          <p class= "text-justify" style="margin-right: -107px;margin-left: 62px;"><%= @mentor.description %></p>
         </div>
 
         <div class="article-header">
@@ -28,30 +26,28 @@
               <p class="font-weight-bold mb-0">user<span class="lt ml-2">23/12/2019</span></p>
               <ul class="p-0">
                 <% @reviews.each do |review| %>
-                <li class="my-4">
-                  <p class="font-weight-lighter"><%= review.rating.to_i.times do%>
-                    <span class="⭐️"></span>
-                    <% end %>
-                  </p>
-                  <p class="font-weight-lighter"><%= review.rating%></p>
-                  <p class="font-weight-lighter"><%= review.content %></p>
-                </li>
+                  <li class="my-4">
+                    <p class="font-weight-lighter"><%= review.rating.to_i.times do%>
+                        <span class="⭐️"></span>
+                      <% end %></p>
+                    <p class="font-weight-lighter"><%= review.rating%></p>
+                    <p class="font-weight-lighter"><%= review.content %></p>
+                  </li>
                 <% end %>
               </ul>
             </div>
           </div>
         </div>
       </div>
-
     </div>
     <div class="col-sm">
       <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
-      <div class="search-form-control form-group" style= style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
-        <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: -39px;margin-bottom: 29px;" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search search-icon"></i>
-        </button>
-      </div>
+        <div class="search-form-control form-group" style= style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
+          <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: -39px;margin-bottom: 29px;" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search search-icon"></i>
+          </button>
+        </div>
       <% end %>
 
       <div class="card-add" style="width: 65%; height: 29%; margin-top: 89px;margin-left: 63px;">
@@ -59,20 +55,19 @@
           <div class="container">
             <div class="row">
               <div>
-               <p class="pt-4">Date</p>
-               <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
-             </div>
-             <div>
-              <p style="margin-top: 10px;">Time</p>
-              <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+                <p class="pt-4">Date</p>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+              </div>
+              <div>
+                <p style="margin-top: 10px;">Time</p>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+              </div>
             </div>
           </div>
-        </div>
-        <div class="d-flex justify-content-center mt-4">
-          <button class="c-btn"><%= link_to "Book a meeting", new_mentor_consultation_path(@mentor) %></button>
+          <div class="d-flex justify-content-center mt-4">
+            <button class="c-btn"><%= link_to "Book a meeting", new_mentor_consultation_path(@mentor) %></button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 </div>

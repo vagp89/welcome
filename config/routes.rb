@@ -2,13 +2,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "components", to: 'pages#components'
   devise_for :users
-
-  # do
-  # get 'logout' => 'devise/sessions#destroy'
-  # end
   
   resources :mentors do
-    resources :consultations, only: [:new, :create]
+    resources :consultations, only: [:new]
+  end
+  resources :users do
+    resources :consultations, only: [:create]
   end
 
   resources :consultations, only: [:edit, :update, :show]
