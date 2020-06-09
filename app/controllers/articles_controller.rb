@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = policy_scope(Article)
+    @mentors = policy_scope(User).where(mentor: true)
   end
 
   def show
