@@ -10,7 +10,7 @@ class MentorsController < ApplicationController
       {
         lat: mentor.latitude,
         lng: mentor.longitude
-        # infoWindow: render_to_string(partial: "info_window", locals: {user: mentor})
+        # infoWindow: render_to_string(partial: "info_window", locals: {mentors: mentor})
       }
       end
     end
