@@ -394,3 +394,9 @@ puts 'Creating 5 reviews...'
     article: Article.all[4],
     content: 'Really interesting read! It has been very helpful, thank you so much!'
     )
+
+puts 'Creating Chatroom'
+
+chatroom = Chatroom.create(name: "general")
+
+puts 'Chatroom created!'
