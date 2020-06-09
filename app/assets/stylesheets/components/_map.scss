@@ -10,5 +10,14 @@
 
 #map{
 position: sticky;
+height: 100vh;
 
+}
+
+.container-fluid{
+  display: flex;
+}
+
+.card-mentor-trip{
+  flex-grow: 1;
 }
