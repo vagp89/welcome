@@ -8,19 +8,20 @@
         <h2>Date</h2>
         <h2>Time</h2>
         <h2>Status</h2>
+        <h2>Start a Chat</h2>
       </div>
 
     <% @consultations.each do |consultation| %>
-    <div class="dashboard-card">
-      <div class="p-3 d-flex justify-content-around">
-        <h2><%= consultation.mentor_id %></h2>
-        <h2><%= consultation.date.strftime("%B%d") %></h2>
-        <h2><%= consultation.date.strftime("%I:%M%p") %></h2>
-        <h2><%= consultation.confirmation %></h2>
+      <div class="dashboard-card">
+        <div class="p-3 d-flex justify-content-around">
+          <h2><%= consultation.mentor_id %></h2>
+          <h2><%= consultation.date.strftime("%B%d") %></h2>
+          <h2><%= consultation.date.strftime("%I:%M%p") %></h2>
+          <h2><%= consultation.confirmation %></h2>
+          <h2><li class="c-btn far fa-envelope" ><%= link_to "Messages", chatroom_path(@chatroom) %></li></h2>
+        </div>
       </div>
-    </div>
-    <% end %>
+      <% end %>
     </div>
   </div>
-  <li class="far fa-envelope" style="color:#FAAA0A" ><%= link_to "Messages", chatroom_path(@chatroom), class: "p-2 nav-item" %></li>
 </div>

@@ -10,7 +10,7 @@
           <div>
             <div style="height: 100px;">
               <h2 class="pb-1"><%= article.title %></h2>
-              <p class="mb-1 lt">written by RuPaul on 12/20/19</p>
+              <p class="mb-1 lt">written by <%= article.user.first_name %> <%= article.user.last_name %> on <%= article.created_at.strftime("%B %d") %></p>
             </div>
             <div style="height: 150px;">
               <p class="pb-2"><%= article.summary %></p>

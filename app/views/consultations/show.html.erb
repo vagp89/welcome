@@ -1,5 +1,8 @@
 <div class="container mt-5 text-center" >
   <h1 class="title">Consultation Confirmation</h1>
-  <p>Thanks for booking a consultation</p>
+  <p>Thanks for booking a consultation!</p>
+  <p>Your confirmation number is: <%= @consultation.id %></p>
+  <p>Your appointment is on: <%= @consultation.date.strftime("%B %d") %></p>
+  <p>at: <%= @consultation.date.strftime("%I:%M%p") %></p>
   <%= link_to "See all your Consultations", dashboard_index_path(@user), class: "m-btn" %>
 </div>

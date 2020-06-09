@@ -19,7 +19,7 @@ class ConsultationsController < ApplicationController
     authorize @consultation
     @consultation.asker = current_user
     if @consultation.save!
-      redirect_to dashboard_index_path
+      redirect_to consultation_path(@consultation)
     else
       render :new
     end
