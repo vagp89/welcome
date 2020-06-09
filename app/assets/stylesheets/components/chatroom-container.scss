@@ -6,8 +6,16 @@
   h1 {
     text-align: center;
   }
+  .c-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .message-container.right {
   text-align: right;
+}
+
+.message-container {
+  padding: 10px;
 }
