@@ -31,6 +31,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    authorize @article
     if @article.update(article_params)
       redirect_to article_path(@article)
     else
@@ -51,6 +52,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :summary, :content, :photo)
+    params.permit(:title, :summary, :content, :photo)
   end
 end
