@@ -39,7 +39,7 @@ file = URI.open('https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib
     address: "Prinzessinnenstraße 21 10969 Berlin",
     mentor: true,
     location: 'Berlin',
-    profession: 'Freelance Web-developer',
+    profession: 'Freelance Web Developer',
     nationality: 'Australian',
     expertise: 'Freelance Visa, Getting an Anmenldung, Finding a flat',
     description: 'Originally from Australia, but fell in love with a Berliner. Moved here and did not know what to do with myself, so I joined a coding bootcamp and learned to code! Now I am a freelancer in Berlin.'
@@ -121,7 +121,7 @@ file = URI.open('https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib
     location: 'Berlin',
     profession: 'German Teacher',
     nationality: 'German',
-    expertise: 'Anmenldung, german translations',
+    expertise: 'Anmeldung, German translations',
     description: 'Grew up in Berlin, but I have met so many expats and I have gone to help them get the Anmenldung so many times- I thought maybe I could use my new found skills for good.'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -139,9 +139,9 @@ file = URI.open('https://images.unsplash.com/photo-1475823678248-624fc6f85785?ix
     address: "Sonnenallee 76, 12045 Berlin",
     mentor: true,
     location: 'Berlin',
-    profession: 'student',
+    profession: 'Student',
     nationality: 'Candadian',
-    expertise: 'Student vias, University application process, finding a student flat',
+    expertise: 'Student visas, University application process, finding a student flat',
     description: 'I am a student at Humboldt University but grew up in Canada. All my friends back home wanted to go abroad, but it takes a lot of work to figure out a completely new system. I am learning so much however, that I want to help make the process to go abroad easier so that others can see what a great experience it is!'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -161,7 +161,7 @@ file = URI.open('https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ix
     location: 'Berlin',
     profession: 'Bartender',
     nationality: 'German',
-    expertise: 'finding a flat, finding a job',
+    expertise: 'Finding a flat, finding a job',
     description: "Grew up traveling around the world with my family and never really understood 'borders'. I want to help others cross the borders that humans have arbitrarly placed around the world. The visa system is difficult, but if you are passionate about research you can easily navigate it!"
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -181,7 +181,7 @@ file = URI.open('https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ix
     location: 'Berlin',
     profession: 'Freelance Designer',
     nationality: 'Spanish',
-    expertise: 'freelance visa, Taxes, EU movement',
+    expertise: 'Freelance visa, Taxes, EU movement',
     description: 'I am a freelance designer here in Berlin. I like meeting other internationals here in Berlin and I hope I can help anyone who needs it move to the wonderful city that is Berlin.'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -201,7 +201,7 @@ file = URI.open('https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ix
     location: 'Berlin',
     profession: 'Civil Servant',
     nationality: 'German',
-    expertise: 'Work visa, Anmenldung, general paperwork',
+    expertise: 'Work visa, Anmeldung, general paperwork',
     description: 'I originally worked in the Berlin immigration office, but I saw how difficult the process was for internationals to navigate and I wanted to do more to help. Welcome gives me the oppurtunity I wanted- to make the world a smaller easily navigatable place.'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
