@@ -16,7 +16,7 @@
           <h2 style="flex: 1;"><%= consultation.date.strftime("%B%d") %></h2>
           <h2 style="flex: 1;"><%= consultation.date.strftime("%I:%M%p") %></h2>
           <h2 style="flex: 1;"><%= consultation.confirmation %></h2>
-          <h2 style="flex: 1;"><li class="c-btn far fa-envelope" ><%= link_to "Messages", chatroom_path(@chatroom) %></li></h2>
+          <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "✉️ Messages", chatroom_path(@chatroom) %></li></h2>
         </div>
       </div>
     <% end %>

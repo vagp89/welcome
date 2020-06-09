@@ -18,6 +18,13 @@
       font-weight: bolder;
       font-size: 1.2em;
     }
+
+    /* the sign out button is not a link */
+    input {
+      color: $yellow;
+      font-weight: bolder;
+      font-size: 1.2em;
+    }
   }
 }
 .navbar-lewagon {
