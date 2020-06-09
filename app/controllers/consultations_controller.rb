@@ -10,7 +10,8 @@ class ConsultationsController < ApplicationController
   end
 
   def new
-    @consultation = Consultation.new
+    @consultation = Consultation.new 
+    @mentor = User.find(params[:mentor_id])
     authorize @consultation
   end
 
@@ -18,6 +19,7 @@ class ConsultationsController < ApplicationController
     @consultation = Consultation.new(consultation_params)
     authorize @consultation
     @consultation.asker = current_user
+    @consultation.mentor = User.find(params[:mentor_id])
     if @consultation.save!
       redirect_to consultation_path(@consultation)
     else
