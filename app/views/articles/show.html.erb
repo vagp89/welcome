@@ -7,7 +7,7 @@
       <p class="text-center mb-5 font-weight-lighter"><span> <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="author avatar" class="avatar-square mr-1"></span>Written by Ally Schue</p>
     </div>
     <div>
-      <img src="https://images.unsplash.com/photo-1551036746-04a04d0aaa22?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" class="round">
+      <%= cl_image_tag @article.photo.key, class: "rounded" %>
     </div>
     <div class="mt-3 mb-0 article-body">
         <p class="mt-3"><%= @article.content %></p>
@@ -16,7 +16,7 @@
         <%= simple_form_for(@article, :html => {:class => 'login-form' }) do |f| %>
         <h2 class="title">Book a <span class="emp">free</span> consultation with Ally now</h2>
         <div class="d-flex justify-content-center">
-        <%= f.submit "Book a meeting with Ally", class: "c-btn ml-2" %>
+        <li class="btn c-btn"><%= link_to "Book a meeting with Ally", new_consultation_path %></li>
         </div>
         <% end %>
       </div>

@@ -21,7 +21,7 @@ class ConsultationsController < ApplicationController
     @consultation.asker = current_user
     @consultation.mentor = User.find(params[:mentor_id])
     if @consultation.save!
-      redirect_to dashboard_index_path
+      redirect_to consultation_path(@consultation)
     else
       render :new
     end

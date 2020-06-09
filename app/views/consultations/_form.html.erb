@@ -1,19 +1,10 @@
 <div class="row">
-
-
   <div class="container">
       <%= simple_form_for [@mentor, @consultation] do |f| %>
       <%= f.input :date %>
-      
-      
-     
       <div class = "d-flex justify-content-center">
-
       <%= f.submit "Make Consultation", class: "m-btn" %>
-
       </div>
-
     <% end %>
-  
   </div>
 </div>
