@@ -41,7 +41,7 @@ file = URI.open('https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib
     location: 'Berlin',
     profession: 'Freelance Web Developer',
     nationality: 'Australian',
-    expertise: 'Freelance Visa, Getting an Anmenldung, Finding a flat',
+    expertise: 'Freelance Visa, Getting an Anmeldung, Finding a flat',
     description: 'Originally from Australia, but fell in love with a Berliner. Moved here and did not know what to do with myself, so I joined a coding bootcamp and learned to code! Now I am a freelancer in Berlin.'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
