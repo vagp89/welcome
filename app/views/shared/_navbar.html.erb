@@ -14,7 +14,11 @@
       </li>
       <li class="nav-item dropdown">
         <!-- upload avatar -->
-        <%= cl_image_tag current_user.photo.key, stylefit: :cover, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %> 
+        <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, stylefit: :cover, class: "avatar-square dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% else %>
+          <%= image_tag "https://images.unsplash.com/photo-1472491235688-bdc81a63246e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", stylefit: :cover, class: "avatar-square dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <% end %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Dashboard", dashboard_index_path, class: "dropdown-item" %>
           <%= link_to "Messages", "#", class: "dropdown-item" %>
