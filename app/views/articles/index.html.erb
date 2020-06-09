@@ -4,13 +4,13 @@
       <% @articles.each do |article| %>
         <div class="card-article m-1" style="width: 13rem;">
         <div class="p-2">
-          <img src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" >
+          <%= cl_image_tag article.photo.key, class: "rounded" %>
         </div>
         <div class="card-article-infos">
           <div>
             <div style="height: 100px;">
               <h2 class="pb-1"><%= article.title %></h2>
-              <p class="mb-1 lt">written by RuPaul on 12/20/19</p>
+              <p class="mb-1 lt">written by</p>
             </div>
             <div style="height: 150px;">
               <p class="pb-2"><%= article.summary %></p>
