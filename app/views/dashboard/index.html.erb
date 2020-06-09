@@ -1,5 +1,6 @@
 <div class="container-fluid">
   <h1 class="title" style="color:#FAAA0A" >Dashboard</h1>
+  <p>See all your scheduled consultations below</p>
   <div>
     <div class="content" style="width: 100%" >
       <div class="p-3 mt-5 d-flex justify-content-around" style="margin-left: 17px;">
@@ -13,7 +14,7 @@
       <div class="dashboard-card">
         <div class="p-3 d-flex justify-content-around">
           <h2 style="flex: 1;"><%= consultation.mentor.first_name %></h2>
-          <h2 style="flex: 1;"><%= consultation.date.strftime("%B%d") %></h2>
+          <h2 style="flex: 1;"><%= consultation.date.strftime("%B %d") %></h2>
           <h2 style="flex: 1;"><%= consultation.date.strftime("%I:%M%p") %></h2>
           <h2 style="flex: 1;"><%= consultation.confirmation %></h2>
           <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "✉️ Messages", chatroom_path(@chatroom) %></li></h2>

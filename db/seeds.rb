@@ -4,6 +4,7 @@ require 'open-uri'
 Article.destroy_all
 Review.destroy_all
 Consultation.destroy_all
+Message.destroy_all
 User.destroy_all
 
 puts 'Creating 5 fake users...'
@@ -207,7 +208,27 @@ file = URI.open('https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ix
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 mentor.save
 
-puts 'Finished 9 Mentors!'
+puts 'Creating 1 fake mentor...'
+file = URI.open('https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')
+  mentor = User.create(
+    email: Faker::Internet.email,
+    password: "123456",
+    username: Faker::Superhero.name,
+    first_name: 'Daniel',
+    last_name: 'Fischer',
+    price: rand(20..30),
+    address: "Koppenpl. 12, 10115 Berlin",
+    mentor: true,
+    location: 'Berlin',
+    profession: 'Student',
+    nationality: 'German',
+    expertise: 'student visa, german translation',
+    description: "I am currently studying for my Masters at Frei University, but did my undergrad in the Netherlands. Even though it was only a move within the EU the languages and cultures are still different and the paper work to go to university was still very intimidating. That's why I want to help others as they navigate a new system so they can not be so stressed!"
+  )
+mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+mentor.save
+
+puts 'Finished 10 Mentors!'
 
 puts 'Creating 1 fake article...'
 file = URI.open('https://images.unsplash.com/photo-1577722422778-cdfac7de2493?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
@@ -281,6 +302,28 @@ file = URI.open('https://images.unsplash.com/photo-1588605360336-77ac8ee6fc53?ix
     user: User.where(mentor: true).sample,
     title: "Top 10 German Schools, Berlin",
     summary: "Break through all the google reviews and get to the credentials that really matter: discover all the great schools Berlin has to offer.",
+    content: Faker::Lorem.paragraph(sentence_count: 300)
+  )
+article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+article.save
+
+puts 'Creating 1 fake article...'
+file = URI.open('https://images.unsplash.com/photo-1574904937426-89a94e79012c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
+  article = Article.create(
+    user: User.where(mentor: true).sample,
+    title: "How to Buy a Bike",
+    summary: "You want to make sure you are not buying a stolen one, but still want a great deal! The latest scoop on how to find a great bike, a little app that is called BikeMatch!",
+    content: Faker::Lorem.paragraph(sentence_count: 300)
+  )
+article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+article.save
+
+puts 'Creating 1 fake article...'
+file = URI.open('https://images.unsplash.com/photo-1583108007142-bfc42b57167e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
+  article = Article.create(
+    user: User.where(mentor: true).sample,
+    title: "Pet Passports",
+    summary: "You might be considering a move to Germany, but have a furry friend you wish to take a long! Never fear, here is a list of all the things to keep in mind when moving your pet internationally.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
