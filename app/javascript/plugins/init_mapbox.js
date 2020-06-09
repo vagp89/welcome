@@ -1,3 +1,4 @@
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
 
 export const initMapbox = () => {

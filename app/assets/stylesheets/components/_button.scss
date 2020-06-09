@@ -21,7 +21,6 @@
   padding: 2px 50px;
   // width: 80px;
   // height: 34px;
-
 }
 
 .c-btn:hover {
@@ -29,6 +28,19 @@
   color: #2E4057;
 }
 
+.d-btn {
+  background-color: #FAAA0A;
+  border-radius: 20px;
+  border-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 2px 40px;
+}
+
+.d-btn:hover {
+  opacity: 0.8;
+  color: #2E4057;
+}
 
 #mentor-btn {
 width: 75px;

@@ -42,7 +42,7 @@ file = URI.open('https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib
     profession: 'Freelance Web-developer',
     nationality: 'Australian',
     expertise: 'Freelance Visa, Getting an Anmenldung, Finding a flat',
-    description: 'Originally from Australia, but fell in Love with a Berliner. Moved here and did not know what to do with myself- so I joined a coding bootcamp and learned to code! Now I am a freelancer in Berlin.'
+    description: 'Originally from Australia, but fell in love with a Berliner. Moved here and did not know what to do with myself, so I joined a coding bootcamp and learned to code! Now I am a freelancer in Berlin.'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 mentor.save
@@ -62,7 +62,7 @@ file = URI.open('https://images.unsplash.com/photo-1463453091185-61582044d556?ix
     profession: 'Product Designer',
     nationality: 'American',
     expertise: 'Business Visa, Finding a Job',
-    description: 'Product designer at a fortune 500 company. Moved to Berlin from the USA. I just like meeting new people and had so many people reaching out to me asking me how I moved to the EU. Figured I would help and earn a bit of extra cash!'
+    description: 'Product designer at a Fortune 500 company. Moved to Berlin from the USA. I just like meeting new people and had so many people reaching out to me asking me how I moved to the EU. Figured I would help and earn a bit of extra cash!'
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 mentor.save
@@ -82,7 +82,7 @@ file = URI.open('https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ix
     profession: 'Founder',
     nationality: 'British',
     expertise: 'Start-up Visa, Rental market, Bank loans',
-    description: "I moved from the UK and started my own company here in Berlin! I had to learn by lots of googling and talking to friends- I was lucky to have a lot of contacts in Berlin. Now I want to help others on their journey to beoming a founder."
+    description: "I moved from the UK and started my own company here in Berlin! I had to learn by lots of googling and talking to friends: I was lucky to have a lot of contacts in Berlin. Now I want to help others on their journey to becoming a founder."
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 mentor.save
@@ -235,8 +235,8 @@ puts 'Creating 1 fake article...'
 file = URI.open('https://images.unsplash.com/photo-1526043446186-2ff4028f978b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
   article = Article.create(
     user: User.where(mentor: true).sample,
-    title: "How To Get an Ameldung, Berlin",
-    summary: "I made an appointment before I even arrived to berlin, and I will tell you how you can too! Avoid the long lines and stress of trying to book an appointment with these easiy steps.",
+    title: "How To Get an Anmeldung in Berlin",
+    summary: "I made an appointment before I even arrived to Berlin, and I will tell you how you can too! Avoid the long lines and stress of trying to book an appointment with these easy steps.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -247,7 +247,7 @@ file = URI.open('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ix
   article = Article.create(
     user: User.where(mentor: true).sample,
     title: "Becoming a Freelancer",
-    summary: "So many expats are moving to the city and they want a flexible lifestyle. Travel Europe while still getting paid.",
+    summary: "So many expats are moving to the city and they want a flexible lifestyle. How to travel around Europe while still getting paid.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -258,7 +258,7 @@ file = URI.open('https://images.unsplash.com/photo-1548061202-83d4ccfa0155?ixlib
   article = Article.create(
     user: User.where(mentor: true).sample,
     title: "Founding Your Own Business",
-    summary: "I founded my own catering company five years ago. It was not easy, but with some time and patients anyone can become a start-up founder",
+    summary: "I founded my own catering company five years ago. It was not easy, but with some time and patience anyone can become a start-up founder!",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -269,7 +269,7 @@ file = URI.open('https://images.unsplash.com/photo-1526907858462-4b1c6b0a0dcc?ix
 article = Article.create(
     user: User.where(mentor: true).sample,
     title: "Work Life Balance, and What to Expect",
-    summary: "Tired of a 40 hour work week? Well welcome to Germany- where the average work week is 35 and the breaks are mandatory.",
+    summary: "Tired of a 40 hour work week? Welcome to Germany, where the average work week is 35 and the breaks are mandatory.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -280,7 +280,7 @@ file = URI.open('https://images.unsplash.com/photo-1588605360336-77ac8ee6fc53?ix
   article = Article.create(
     user: User.where(mentor: true).sample,
     title: "Top 10 German Schools, Berlin",
-    summary: "Break through all the google reviews and get to the credentials that really matter and discover all the great schools Berlin has to offer.",
+    summary: "Break through all the google reviews and get to the credentials that really matter: discover all the great schools Berlin has to offer.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
@@ -304,7 +304,7 @@ puts 'Creating 5 reviews...'
   review = Review.create(
     consultation: Consultation.all[0],
     rating: 4,
-    content: "<%= @user.first_name %> was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without <%= @user.first_name %>!"
+    content: "<%= @mentor.first_name %> was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without <%= @mentor.first_name %>!"
   )
 
   review = Review.create(
@@ -338,7 +338,7 @@ puts 'Creating 5 reviews...'
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[0],
-    content: 'Really interesting read! It has been very helpful thank you!'
+    content: 'Really interesting read! It has been very helpful, thank you!'
     )
 
   comment = Comment.create(
@@ -350,13 +350,13 @@ puts 'Creating 5 reviews...'
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[0],
-    content: 'Really interesting read! It has been very helpful thank you!'
+    content: 'Really interesting read! It has been extremely helpful: thank you!!!'
     )
 
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[1],
-    content: 'Great Read! I have now made an appointment with you as a mentor!'
+    content: 'Great read! I have now made an appointment with you as a mentor!'
     )
 
   comment = Comment.create(
@@ -368,13 +368,13 @@ puts 'Creating 5 reviews...'
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[1],
-    content: 'Really interesting read! It has been very helpful thank you!'
+    content: 'Really interesting read! It has been very helpful, thank you!'
     )
 
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[2],
-    content: 'Great Read! I have now made an appointment with you as a mentor!'
+    content: 'Great read! I have now made an appointment with you as a mentor!'
     )
 
   comment = Comment.create(
@@ -386,11 +386,11 @@ puts 'Creating 5 reviews...'
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[3],
-    content: 'Great Read! I have now made an appointment with you as a mentor!'
+    content: 'Great read! I have now made an appointment with you as a mentor!'
     )
 
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[4],
-    content: 'Really interesting read! It has been very helpful thank you!'
+    content: 'Really interesting read! It has been very helpful, thank you so much!'
     )
