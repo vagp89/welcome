@@ -235,7 +235,7 @@ puts 'Creating 1 fake article...'
 file = URI.open('https://images.unsplash.com/photo-1526043446186-2ff4028f978b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
   article = Article.create(
     user: User.where(mentor: true).sample,
-    title: "How To Get an Anmeldung in Berlin",
+    title: "How To Get an Anmeldung",
     summary: "I made an appointment before I even arrived to Berlin, and I will tell you how you can too! Avoid the long lines and stress of trying to book an appointment with these easy steps.",
     content: Faker::Lorem.paragraph(sentence_count: 300)
   )

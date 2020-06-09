@@ -1,18 +1,22 @@
 <div class="index-container">
   <div class="d-flex">
     <div class="row col-sm-12 col-md-8 px-0" style="justify-content: space-around;">
+      <div>
+        <h1 class="title mt-5">Search results: <span class="emp">Articles</span></h1>
+      </div>
       <% @articles.each do |article| %>
         <div class="card-article m-1" style="width: 13rem;">
-        <div class="p-2">
-          <%= cl_image_tag article.photo.key, class: "rounded shadow" %>
-        </div>
+          <div class="p-2">
+            <%= cl_image_tag article.photo.key, class: "rounded shadow" %>
+          </div>
         <div class="card-article-infos">
           <div>
-            <div style="height: 100px;">
+            <div style="height: 110px;">
               <h2 class="pb-1"><%= article.title %></h2>
-              <p class="mb-1 lt">written by <%= article.user.first_name %> <%= article.user.last_name %> on <%= article.created_at.strftime("%B %d") %></p>
+              <p class="lt">Written by <%= article.user.first_name %> <%= article.user.last_name %></p>
+              <p class="mb-1 lt">Posted <%= article.created_at.strftime("%B %d") %></p>
             </div>
-            <div style="height: 150px;">
+            <div style="height: 130px;">
               <p class="pb-2"><%= article.summary %></p>
             </div>
             <div class="d-flex justify-content-center">
