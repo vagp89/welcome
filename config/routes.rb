@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "components", to: 'pages#components'
   devise_for :users
+
+  # do
+  # get 'logout' => 'devise/sessions#destroy'
+  # end
   
   resources :mentors do
     resources :consultations, only: [:new, :create]
