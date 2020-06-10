@@ -34,3 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initChatroomCable();
 })
+
+import "../plugins/flatpickr"
