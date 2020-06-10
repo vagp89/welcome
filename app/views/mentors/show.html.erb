@@ -10,7 +10,7 @@
       </div>
       <div class="card-mentor" style="width: 27rem; margin-top: 30px;">
         <div class="card-body " style="margin-left: -43px;">
-          <h2 class="pb-1 title" style="font-size: 25px;margin-left: 57px;margin-right: 8px;margin-top: -10px;margin-bottom: -0.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
+          <h2 class="pb-1 title" style="font-size: 40px; margin-left: 57px; margin-right: 8px; margin-top: -10px; margin-bottom: -0.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter" style="font-size: 20px;"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
           <% @reviews.each do |review| %>
             <p class="font-weight-lighter" style="margin-left: 59px;"><% review.rating.to_i.times do%>
               <span class="yellow-link"><i class="fas fa-star"></i></span>
@@ -26,7 +26,7 @@
               <ul class="p-0">
                 <% @reviews.each do |review| %>
                   <li style="margin-left: 43px;margin-right: -74px;">
-                    <p class="font-weight-bold mb-0"><%= current_user.first_name %><span class="lt ml-2">23/12/2019</span></p>
+                    <p class="font-weight-bold mb-0"><%= review.consultation.asker.first_name %><span class="lt ml-2">23/12/2019</span></p>
                       <p class="font-weight-lighter"><% review.rating.to_i.times do%>
                         <span class="yellow-link"><i class="fas fa-star"></i></span>
                       <% end %></p>
