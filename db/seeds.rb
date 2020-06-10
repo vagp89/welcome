@@ -8,8 +8,8 @@ Message.destroy_all
 Chatroom.destroy_all
 User.destroy_all
 
-puts 'Creating 5 fake users...'
-5.times do
+puts 'Creating 30 fake users...'
+30.times do
   user = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -210,7 +210,7 @@ mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 mentor.save
 
 puts 'Creating 1 fake mentor...'
-file = URI.open('https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')
+file = URI.open('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
   mentor = User.create(
     email: Faker::Internet.email,
     password: "123456",
@@ -218,7 +218,7 @@ file = URI.open('https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ix
     first_name: 'Daniel',
     last_name: 'Fischer',
     price: rand(20..30),
-    address: "Koppenpl. 12, 10115 Berlin",
+    address: "Rudi-Dutschke-Straße 26, 10969 Berlin",
     mentor: true,
     location: 'Berlin',
     profession: 'Student',
@@ -1035,7 +1035,7 @@ article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 article.save
 
 puts 'Creating 1 fake article...'
-file = URI.open('https://images.unsplash.com/photo-1583108007142-bfc42b57167e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
+file = URI.open('https://images.unsplash.com/photo-1527150602-a98f7a6f2746?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
   article = Article.create(
     user: User.where(mentor: true).sample,
     title: "Pet Passports",
@@ -1084,8 +1084,8 @@ article.save
 
 puts 'Finished Articles!'
 
-puts 'creating 5 consultations'
-5.times do
+puts 'creating 30 consultations'
+30.times do
 consultation = Consultation.create(
   asker: User.where(mentor: false).sample,
   mentor: User.where(mentor: true).sample,
@@ -1096,40 +1096,189 @@ end
 
 puts 'created a consultation'
 
-puts 'Creating 5 reviews...'
-  review = Review.create(
+puts 'Creating 30 reviews...'
+  review = Review.create!(
     consultation: Consultation.all[0],
     rating: 4,
-    content: "Was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without you!"
+    content: "My mentor was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without my mentor!"
   )
 
-  review = Review.create(
+  review = Review.create!(
     consultation: Consultation.all[1],
     rating: 5,
     content: "10/10 can't recommend WELCOME enough! Their friendly mentors helped me so much when I was a stranger to the city!"
   )
 
-  review = Review.create(
+  review = Review.create!(
     consultation: Consultation.all[2],
     rating: 5,
     content: "Thank you for helping me get my taxes together under a crazy deadline in a language I don't speak yet! Couldn't have done it without my wonderful mentor."
   )
 
-  review = Review.create(
+  review = Review.create!(
     consultation: Consultation.all[3],
     rating: 3,
     content: "The service was useful, but my mentor didn't know enough about my country of origin's exit requirements so their suggestions weren't super helpful. I think next time I'll just have to rely on Google or a friend."
   )
 
-  review = Review.create(
+  review = Review.create!(
     consultation: Consultation.all[4],
     rating: 4,
     content: "Trust the pros at Welcome! I couldn't have done it without you, THANK YOU!!!"
   )
+  review = Review.create!(
+    consultation: Consultation.all[5],
+    rating: 4,
+    content: "My mentor was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without my mentor!"
+  )
 
-  puts 'Finished creating 5 Reviews!'
+  review = Review.create!(
+    consultation: Consultation.all[6],
+    rating: 5,
+    content: "10/10 can't recommend WELCOME enough! Their friendly mentors helped me so much when I was a stranger to the city!"
+  )
 
-  puts ' creating 5 comments'
+  review = Review.create!(
+    consultation: Consultation.all[7],
+    rating: 5,
+    content: "Thank you for helping me get my taxes together under a crazy deadline in a language I don't speak yet! Couldn't have done it without my wonderful mentor."
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[8],
+    rating: 3,
+    content: "The service was useful, but my mentor didn't know enough about my country of origin's exit requirements so their suggestions weren't super helpful. I think next time I'll just have to rely on Google or a friend."
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[9],
+    rating: 4,
+    content: "Trust the pros at Welcome! I couldn't have done it without you, THANK YOU!!!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[10],
+    rating: 5,
+    content: "I was really happy with my experiance using Welcome my mentor was very helpful and friendly."
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[11],
+    rating: 4,
+    content: "Would recommend!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[12],
+    rating: 3,
+    content: "Was overall a good experiance"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[13],
+    rating: 4,
+    content: "Thanks for all your help"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[14],
+    rating: 5,
+    content: "I was really happy. Would recmmend to a friend."
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[15],
+    rating: 4,
+    content: "Cool person"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[16],
+    rating: 5,
+    content: "You saved me! I was so confused before!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[17],
+    rating: 3,
+    content: "Thankssss!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[18],
+    rating: 4,
+    content: "What a cool app idea! My mentor was helpful and kind."
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[19],
+    rating: 4,
+    content: "Super fun, was stressed now not so much!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[20],
+    rating: 5,
+    content: "Really liked my mentor- they were very helpful!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[21],
+    rating: 3,
+    content: "Really enjoyed working with my mentor"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[22],
+    rating: 4,
+    content: "My mentor was very helpful!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[23],
+    rating: 5,
+    content: "My mentor was great, would recommend"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[24],
+    rating: 4,
+    content: "Welcome was useful, would recommend"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[25],
+    rating: 4,
+    content: "They really helped clear up my issues- I now have my visa and am very happy"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[26],
+    rating: 5,
+    content: "My mentor was great, would recommend"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[27],
+    rating: 3,
+    content: "Thankssss!"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[28],
+    rating: 5,
+    content: "Excellent"
+  )
+
+  review = Review.create!(
+    consultation: Consultation.all[29],
+    rating: 4,
+    content: "Enjoyed talking with you!!"
+  )
+
+  puts 'Finished creating 30 Reviews!'
+
+  puts ' creating 30 comments'
 
   comment = Comment.create(
     user: User.all.sample,
@@ -1190,6 +1339,127 @@ puts 'Creating 5 reviews...'
     article: Article.all[4],
     content: 'Really interesting read! It has been very helpful, thank you so much!'
     )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[3],
+    content: 'Really interesting read! It has been very helpful, thank you!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[8],
+    content: 'Not sure I agree with your solutions, but the article was well written.'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[7],
+    content: 'Really interesting read! It has been extremely helpful: thank you!!!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[8],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[8],
+    content: 'A good summary of the challenge!!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[9],
+    content: 'Really interesting read! It has been very helpful, thank you!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[2],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[3],
+    content: 'Not sure I agree with your solutions, but the article was well written.'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[3],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[4],
+    content: 'Really interesting read! It has been very helpful, thank you so much!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[7],
+    content: 'Really interesting read! It has been very helpful, thank you!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[10],
+    content: 'Not sure I agree with your solutions, but the article was well written.'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[10],
+    content: 'Really interesting read! It has been extremely helpful: thank you!!!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[8],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[5],
+    content: 'A good summary of the challenge!!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[6],
+    content: 'Really interesting read! It has been very helpful, thank you!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[7],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[8],
+    content: 'Not sure I agree with your solutions, but the article was well written.'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[9],
+    content: 'Great read! I have now made an appointment with you as a mentor!'
+    )
+
+  comment = Comment.create(
+    user: User.all.sample,
+    article: Article.all[10],
+    content: 'Really interesting read! It has been very helpful, thank you so much!'
+    )
+puts ' Finished 30 comments'
 
 puts 'Creating Chatroom'
 
