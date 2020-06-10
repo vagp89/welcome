@@ -8,3 +8,5 @@ production:
   adapter: redis
   url: <%= ENV.fetch("rediscloud-pointy-76172") { "redis://localhost:6379/1" } %>
   channel_prefix: welcome_production
+
+# comand
