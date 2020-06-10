@@ -15,6 +15,5 @@ class User < ApplicationRecord
 
   def average_rating
 
-
   end
 end
