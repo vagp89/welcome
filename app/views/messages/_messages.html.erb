@@ -2,6 +2,7 @@
   <div class="message-container <%= 'right' if user_is_messages_author %>" id="message-<%= message.id %>">
     <i class="author">
       <span><%= message.user.username %></span>
+      <span><%= cl_image_tag message.user.photo.key, class: "sm-avatar-img" %></span>
       <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
     </i>
     <p><%= message.content %></p>
