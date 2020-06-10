@@ -15,7 +15,7 @@ class MentorsController < ApplicationController
       end
     end
 
-    def show
+  def show
       @mentor = policy_scope(User).find(params[:id])
       @reviews = Review.joins(:consultation).where(consultations:{mentor_id: @mentor.id})
       authorize @mentor
