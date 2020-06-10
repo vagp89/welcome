@@ -5,6 +5,7 @@ Article.destroy_all
 Review.destroy_all
 Consultation.destroy_all
 Message.destroy_all
+Chatroom.destroy_all
 User.destroy_all
 
 puts 'Creating 5 fake users...'
@@ -141,7 +142,7 @@ file = URI.open('https://images.unsplash.com/photo-1475823678248-624fc6f85785?ix
     mentor: true,
     location: 'Berlin',
     profession: 'Student',
-    nationality: 'Candadian',
+    nationality: 'Canadian',
     expertise: 'Student visas, University application process, finding a student flat',
     description: 'I am a student at Humboldt University but grew up in Canada. All my friends back home wanted to go abroad, but it takes a lot of work to figure out a completely new system. I am learning so much however, that I want to help make the process to go abroad easier so that others can see what a great experience it is!'
   )
@@ -440,6 +441,6 @@ puts 'Creating 5 reviews...'
 
 puts 'Creating Chatroom'
 
-chatroom = Chatroom.create(name: "general")
+chatroom = Chatroom.create(name: "Welcome")
 
 puts 'Chatroom created!'
