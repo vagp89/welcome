@@ -49,15 +49,21 @@
         </div>
       <% end %>
 
-      <div class="card-add" style="text-align: center; width: 59%; height: 160px; margin-top: 89px;margin-left: 65px;">
+      <div class="card-add" style="width: 65%; height: 29%; margin-top: 89px;margin-left: 63px;">
         <div class="card-add-infos">
           <div class="container">
             <div class="row">
               <div>
-                <p class="pt-4">Currently available for appointments!</p>
+                <p class="pt-4">Date</p>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
               </div>
-              <div class="d-flex justify-content-center mt-3">
-            <button class="d-btn"><%= link_to "Book Consultation", new_mentor_consultation_path(mentor_id: @mentor.id) %></button>
+              <div>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <button class="c-btn"><%= link_to "Book a meeting", new_mentor_consultation_path(@mentor) %></button>
           </div>
         </div>
       </div>

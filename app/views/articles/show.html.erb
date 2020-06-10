@@ -16,7 +16,7 @@
         <%= simple_form_for(@article, :html => {:class => 'login-form' }) do |f| %>
         <h2 class="title">Book a <span class="emp">free</span> consultation with <%= @article.user.first_name %> now!</h2>
         <div class="d-flex justify-content-center">
-        <li class="btn c-btn"><%= link_to "Book a meeting now!", new_mentor_consultation_path(mentor_id: @mentor.id) %></li>
+        <li class="btn c-btn"><%= link_to "Book a meeting now!", consultation_path %></li>
         </div>
         <% end %>
       </div>
