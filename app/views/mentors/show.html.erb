@@ -13,7 +13,7 @@
           <h2 class="pb-1 title" style="font-size: 25px;margin-left: 57px;margin-right: 8px;margin-top: -10px;margin-bottom: -0.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
           <% @reviews.each do |review| %>
             <p class="font-weight-lighter" style="margin-left: 59px;"><% review.rating.to_i.times do%>
-              <span>⭐️</span>
+              <span class="yellow-link"><i class="fas fa-star"></i></span>
             <% end %>
           <% end %>
           <p class= "text-justify" style="margin-right: -107px;margin-left: 62px;"><%= @mentor.description %></p>
@@ -28,7 +28,7 @@
                   <li style="margin-left: 43px;margin-right: -74px;">
                     <p class="font-weight-bold mb-0"><%= current_user.first_name %><span class="lt ml-2">23/12/2019</span></p>
                       <p class="font-weight-lighter"><% review.rating.to_i.times do%>
-                        <span>⭐️</span>
+                        <span class="yellow-link"><i class="fas fa-star"></i></span>
                       <% end %></p>
                     <p class="font-weight-lighter"><%= review.content %></p>
                   </li>
@@ -40,26 +40,35 @@
       </div>
     </div>
     <div class="col-sm">
-      <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
-        <div class="search-form-control form-group" style= style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
-          <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: -39px;margin-bottom: 29px;" />
-          <button name="button" type="submit" class="btn btn-flat">
-            <i class="fas fa-search search-icon"></i>
-          </button>
-        </div>
-      <% end %>
+      <div>
+        <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
+          <div class="search-form-control form-group" style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
+            <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: -39px;margin-bottom: 29px;" />
+            <button name="button" type="submit" class="btn btn-flat">
+              <i class="fas fa-search search-icon"></i>
+            </button>
+          </div>
+        <% end %>
+      </div>
 
-      <div class="card-add" style="text-align: center; width: 59%; height: 160px; margin-top: 89px;margin-left: 65px;">
+      <div class="card-add" style="width: 65%; height: 29%; margin-top: 89px;margin-left: 63px;">
         <div class="card-add-infos">
           <div class="container">
             <div class="row">
               <div>
-                <p class="pt-4">Currently available for appointments!</p>
+                <p class="pt-4">Date</p>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
               </div>
-              <div class="d-flex justify-content-center mt-3">
-            <button class="d-btn"><%= link_to "Book Consultation", new_mentor_consultation_path(mentor_id: @mentor.id) %></button>
+               <p style="margin-top: 10px;">Time</p>
+                <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="" />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+              <button class="c-btn"><%= link_to "Book a meeting", new_mentor_consultation_path(@mentor) %></button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
