@@ -5,7 +5,7 @@
       <h2 class="pb-1 title" style="margin-top: 80px;">Search results: <span class="emp">Mentors</span></h2>
       <div class="card-deck" style="margin-left: 9px; margin-top: 9px; margin-right: 20px">
         <% @mentors.each do |user| %>
-          <div class="card-mentor-trip" style="width: 15rem; height: 25rem; margin-right: 24px; margin-bottom: 23px; ">
+          <div class="card-trip" style="width: 15rem; height: 25rem; margin-right: 24px; margin-bottom: 23px; ">
             <div class="p-3">
               <%= cl_image_tag user.photo.key, class: "rounded card-img shadow" %>
             </div>
