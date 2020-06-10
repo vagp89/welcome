@@ -380,7 +380,7 @@ Look outside the Ring: Don't limit your search to Kreuzberg, Prenzlauer Berg, Ne
 
 Nebenkosten: The Nebenkosten is what you pay for the utilities. This usually includes central heating, hot water, trash collection and city taxes, but it doesn't include the GEZ. These costs are added to the cold rent (Kaltmiete). The cold rent plus the Nebenkosten is called the warm rent (Warmmiete). The Nebenkosten are not a fixed cost, they are estimated1. It is recalculated once per year. If you paid too much, you will get a refund. If you didn't pay enough, you will get an invoice. For instance, I had to pay 250€ more at the end of 2017.
 
-Noise: There are two sources of noise you should worry about: flights from Tegel and ambulances. If you live around Tegel, it's hard to sleep with your windows open. If you live on a large street like Friedrichstraße, the sound of ambulances and traffic can also keep you up at night. Use this noise map of Berlin to see how loud an area is. There are some "party areas" in Berlin that get really loud and crowded during the summer, particularly the U1 between Kottbusser Tor and Warschauer Straße.
+Noise: There are two sources of noise you should worry about: flights from Tegel and ambulances. If you live around Tegel, it's hard to sleep with your windows open. If you live on a large street like Friedrichstraße, the sound of ambulances and traffic can also keep you up at night. Use this noise map of Berlin to see how loud an area is. There are some party areas in Berlin that get really loud and crowded during the summer, particularly the U1 between Kottbusser Tor and Warschauer Straße.
 
 Permission from the landlord: You can't rent a room or an apartment without the permission of the landlord1. Some tenants illegally sublet their apartment, or rent rooms AirBnB. If they get caught, the landlord can end their lease immediately1 and kick them out 3 months later1. You are not supposed to register your address without the landlord's permission.
 
@@ -481,7 +481,7 @@ As a freelance visa holder, you shall register at “Bürgeramt” or Local Regi
 The identification number given upon the registration, after just few days, supports your further registration at German Tax Office for getting: Tax number, opening a German bank account, paying internet, telephone contract, electricity, and so on. It takes about four weeks or more to obtain the tax number by post mail. The number that you as a freelancer receive when registering its location is called Identification Number “Identifikationsnummer”, Tax Identification Number “Steueridentifikationsnummer” or Tax ID “Steuer-ID” but the three of them refer to the same number and are the same thing. You can find more information here.
 
 Step three – Getting your German Tax number
-Regardless that you are a freelancer, in Germany paying Income Taxes “Einkommensteuer” annually is a compulsion. Nevertheless, these taxes are pretty lower than for individuals involved in contractual or permanent jobs.  As a freelancer, you must get “Steuernummer” or Tax Number as the permit for acting an eligible freelancing activity in Germany. Registration procedure involves submitting duly completed Tax Number Registration Form, so called “Fragebogen zur Steuerlichen Erfassung” at the nearest Tax Registration Office of the city of residence.
+Regardless that you are a freelancer, in Germany paying Income Taxes 'Einkommensteuer' annually is a compulsion. Nevertheless, these taxes are pretty lower than for individuals involved in contractual or permanent jobs.  As a freelancer, you must get “Steuernummer” or Tax Number as the permit for acting an eligible freelancing activity in Germany. Registration procedure involves submitting duly completed Tax Number Registration Form, so called “Fragebogen zur Steuerlichen Erfassung” at the nearest Tax Registration Office of the city of residence.
 
 Step four – Toward the Freelance World
 From the time that you receive Tax Number from German Tax Office you are ready to think about freelancing plan, as you automatically become an eligible freelancer permitted to start your commercial activity and sending clients the invoices with the Tax Number in it.
@@ -505,7 +505,7 @@ The next step forward for you when starting the freelance job is paying taxes an
 Income taxes
 In difference to contractual jobs where the employer pays tax incomes on behalf of the employee, as a freelancer you do not have an employer so you have to pay them on your own and payable income taxes must include one calendric year of commerce activity. Your Incomes declaration as a freelancer must be done in the form of profit/loss assessment, which is so much simpler compared to declaring the annual financial statements.
 
-To declare incomes and pay income taxes in Germany there is an electronic system called “ELektronische STeuerERklärung – ELSTER” or electronic tax declaration. There is software that helps on this regard where you will need to fill in your tax form “Mantelbogen” including your name, address and bank details, as well as other tax forms “Anlagen” which differs based on the level of your income. As a freelancer, you must fill-in the “Anlagen S” while health Insurance payments must be paid through “Anlage Vorsorgeaufwand”, and so on.
+To declare incomes and pay income taxes in Germany there is an electronic system called 'ELektronische STeuerERklärung – ELSTER' or electronic tax declaration. There is software that helps on this regard where you will need to fill in your tax form “Mantelbogen” including your name, address and bank details, as well as other tax forms “Anlagen” which differs based on the level of your income. As a freelancer, you must fill-in the 'Anlagen S' while health Insurance payments must be paid through 'Anlage Vorsorgeaufwand', and so on.
 
 In respect to value added tax (VAT) if you make annual incomes up to 17,500 € you are not called to charge VAT to your clients but you can do so, while if you exceed making more incomes than that you are obliged to do so.
 
@@ -564,7 +564,7 @@ Step 3: Get the right visa
 
 If you are not a European Union citizen, you are not allowed to freelance in Germany without a visa.
 
-On your residence permit (Aufenthaltstitel), look for a line that says "Selbständige Tätigkeit gestattet" (self-employment allowed). If your residence permit has that line, you can freelance or start a business in Germany. If it doesn't, you must apply for a German freelance visa.
+On your residence permit (Aufenthaltstitel), look for a line that says 'Selbständige Tätigkeit gestattet' (self-employment allowed). If your residence permit has that line, you can freelance or start a business in Germany. If it doesn't, you must apply for a German freelance visa.
 
 In this step, you will obtain:
 
@@ -641,7 +641,7 @@ At the turn of the century few employees in Germany were given holidays. In 1902
 
 For further Information visit:
 
-OECD Work-Life Balance: http://www.oecdbetterlifeindex.org/topics/work-life-balance/[en] [fr]
+OECD Work-Life Balance: http://www.oecdbetterlifeindex.org/topics/work-life-balance/
 National holidays
 
 Germany has quite generous holidays in comparison to other European countries. There are more public holidays in Germany than in any other European country. On these days, banks and most shops are closed, including supermarkets. However, many restaurants remain open. Public transportation and other services are also available. Many shops and businesses are also closed on Carnival Rose Monday (Cologne and Rhine region), Christmas Eve and New Year’s Eve although these are not official holidays.
@@ -669,16 +669,16 @@ Working hours
 
 Opening hours
 
-In Germany, businesses and shops are not legally allowed to stay open as long as they please and there are strict regulations concerning opening and closing hours. The German federal law “Ladenschlussgesetz” (Shop Closing Law) together with individual regulations in different States controls opening hours. Thus supermarkets for example close at 22.00 at the latest and open before 9 a.m. or 10 a.m. On Sundays almost everything is closed with the exception of bakeries and petrol stations.
+In Germany, businesses and shops are not legally allowed to stay open as long as they please and there are strict regulations concerning opening and closing hours. The German federal law 'Ladenschlussgesetz' (Shop Closing Law) together with individual regulations in different States controls opening hours. Thus supermarkets for example close at 22.00 at the latest and open before 9 a.m. or 10 a.m. On Sundays almost everything is closed with the exception of bakeries and petrol stations.
 
  Working times
 
-The German Working Time Regulations (“Arbeitszeitgesetz”) regulate working hours on a legal basis. They are based on the European regulation 93/104/EG. In addition, most industries have collective agreements that regulate working hours and holidays. However, it can be said, that a working week of more than 48 hours on average during a  6 month period must not be exceeded. Furthermore, Sundays and national holidays are non-working days.
+The German Working Time Regulations ('Arbeitszeitgesetz') regulate working hours on a legal basis. They are based on the European regulation 93/104/EG. In addition, most industries have collective agreements that regulate working hours and holidays. However, it can be said, that a working week of more than 48 hours on average during a  6 month period must not be exceeded. Furthermore, Sundays and national holidays are non-working days.
 
 For further information please visit:
 
-Working-in-Germany: http://www.working-in-germany.com/work-hours-law-0206.html [en]
-Lonely planet: http://www.lonelyplanet.com/germany/work-study-volunteering/work [en]
+Working-in-Germany: http://www.working-in-germany.com/work-hours-law-0206.html
+Lonely planet: http://www.lonelyplanet.com/germany/work-study-volunteering/work
 Working culture
 
 Germans see themselves as modern, liberal and cultured, and working practices are formal and professional. The following outlines the working practices that you should be familiar with before investing in Germany:
@@ -689,7 +689,7 @@ Professional rank and status in Germany is generally based on an individual’s 
 An important aspect is Germany’s work ethic. Employees define themselves as part of the corporation they are working for and quickly identify themselves with its product and/ or services.
 Rank is very important in business. Never set up a meeting for a lower ranked company employee to meet with a higher ranked person.
 Notwithstanding what has been said previously, today over half of all university graduates are women. Female students are well represented in the professions; they lead in some fields such as medicine and law. The new availability of qualified female graduates is likely to bring great changes in the German workplace of the future.
-Pay and power inequalities are still present however. Male employees tend to receive higher wages than their female counterparts. Jobs considered as being “women’s work” typically pay less than those deemed “men’s work”.
+Pay and power inequalities are still present however. Male employees tend to receive higher wages than their female counterparts. Jobs considered as being “women’s work” typically pay less than those deemed 'men’s work'.
 In more traditional companies, it is still generally true that everything is run by committees, things are discussed in great length and risk taking is not as common as in other countries.
 There is one philosophy for almost everybody in German business: if someone says he is going to do something, he will do it. The same is expected of others as well. Never make a promise that you cannot keep or offer something that you cannot deliver. Germans dislike and do not trust unreliable people.
 There is no legislated or administratively determined minimum wage. Collective bargaining agreements set minimum pay rates and are enforceable by law for an estimated 80 to 90 per cent of all wage and salary earners
@@ -710,7 +710,7 @@ file = URI.open('https://images.unsplash.com/photo-1588605360336-77ac8ee6fc53?ix
     summary: "Break through all the google reviews and get to the credentials that really matter: discover all the great schools Berlin has to offer.",
     content: "Are you ready to speak German like a native? Do you want to travel and make friends around the world? Learning German in Berlin can make it happen. We researched the best language schools so you don't have to.
 
-German is famous for having long words such as “kraftfahrzeughaftpflichtversicherung“, which means “automobile liability insurance”. This is because German makes extensive use of compound words, which can build on each other to create monstrosities. According to Wikipedia, German is the 11th most widely spoken language in the world, with about 1.4% of the population being German-speaking.
+German is famous for having long words such as 'kraftfahrzeughaftpflichtversicherung', which means 'automobile liability insurance'. This is because German makes extensive use of compound words, which can build on each other to create monstrosities. According to Wikipedia, German is the 11th most widely spoken language in the world, with about 1.4% of the population being German-speaking.
 
 Learning German is a lot easier with a great app. German Translator Dictionary + by VidaLingua has the tools you need to succeed. You can download it for free on your iPhone or Android. Give it a try!
 
@@ -798,7 +798,7 @@ Insurance & stuff
 
 The clear advantage of buying it in a store is that you have a proof of purchase that allows you to register your bike, which you can’t do buying from flea-markets or from Ebay. Registering your bike in Berlin allows you to prove the ownership of the bike and help you if it gets stolen. You can register your bike with the police by following this link and picking the next possible time slot.
 
-Insurance-wise you can get you bike covered by your “Hausratversicherung“. If you haven’t subscribed to one, you should really do. It covers all the things you own in your flat & your bike in that case. Websites like Preisvergleich can help you find the best rates."
+Insurance-wise you can get you bike covered by your 'Hausratversicherung'. If you haven’t subscribed to one, you really should. It covers all the things you own in your flat & your bike in that case. Websites like Preisvergleich can help you find the best rates."
   )
 article.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 article.save
@@ -855,7 +855,7 @@ puts 'Creating 5 reviews...'
   review = Review.create(
     consultation: Consultation.all[0],
     rating: 4,
-    content: "<%= @mentor.first_name %> was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without <%= @mentor.first_name %>!"
+    content: "Was professional, reliable, and knowledgeable on the subject. I had so much anxiety about starting the process until I met the amazing mentor who helped me get my paperwork in order and schedule the appropriate appointments. I couldn't have done it without you!"
   )
 
   review = Review.create(
@@ -867,7 +867,7 @@ puts 'Creating 5 reviews...'
   review = Review.create(
     consultation: Consultation.all[2],
     rating: 5,
-    content: "Thank you for helping me get my taxes together under a crazy deadline in a language I don't speak yet! Couldn't have done it without my wonderful mentor, <%= @user.first_name %>."
+    content: "Thank you for helping me get my taxes together under a crazy deadline in a language I don't speak yet! Couldn't have done it without my wonderful mentor."
   )
 
   review = Review.create(
