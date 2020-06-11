@@ -1,5 +1,5 @@
 <div class="chatroom-container">
-  <div class="message-container <%= (message.user == current_user) ? "right" : "left" %>" id="message-<%= message.id %>">
+  <div class="message-container <%= (message.user.email == current_user.email) ? "right" : "left" %>" id="message-<%= message.id %>">
     <i class="author">
       <span><%= message.user.username %></span>
       <% if message.user.photo.attached? %>
