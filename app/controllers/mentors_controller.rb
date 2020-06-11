@@ -4,8 +4,21 @@ class MentorsController < ApplicationController
   def index
     @mentors = policy_scope(User).where(mentor: true)
     authorize @mentors
-    @mentors = User.geocoded # returns user with coordinates
-
+    if params[:query].present?
+      sql_query = " \
+        users.first_name @@ :query \
+        OR users.last_name @@ :query \
+        OR users.profession @@ :query \
+        OR users.nationality @@ :query \
+        OR users.location @@ :query \
+        OR users.expertise @@ :query \
+      "
+      @mentors = User.where(sql_query, query: "%#{params[:query]}%").geocoded
+      @searchterm = params[:query]
+    else
+      @mentors = User.geocoded # returns user with coordinates
+      @searchterm = "Mentors"
+    end
     @markers = @mentors.map do |mentor|
       {
         lat: mentor.latitude,
