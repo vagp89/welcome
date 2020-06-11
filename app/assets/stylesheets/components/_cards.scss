@@ -51,6 +51,7 @@
   height: 25rem;
   position: sticky;
   top: 0;
+  padding: 16px;
 }
 
 .sm-img {
@@ -65,13 +66,13 @@
   color: #2E4057;
   font-family: 'Lato', sans-serif;
   padding-top: 16px;
+  font-size: 21px;
 }
 
 .card-add-infos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
 }
 
 .card-add .card-add-infos {
