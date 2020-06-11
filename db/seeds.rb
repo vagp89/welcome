@@ -1415,7 +1415,7 @@ puts 'Creating 30 reviews...'
   comment = Comment.create(
     user: User.all.sample,
     article: Article.all[10],
-    content: 'Really interesting read! It has been extremely helpful: thank you!!!'
+    content: 'Really interesting read! It has been extremely helpful, thank you!!!'
     )
 
   comment = Comment.create(
