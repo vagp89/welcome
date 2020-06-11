@@ -9,17 +9,17 @@ class MentorsController < ApplicationController
     @markers = @mentors.map do |mentor|
       {
         lat: mentor.latitude,
-        lng: mentor.longitude
-        # infoWindow: render_to_string(partial: "info_window", locals: {mentors: mentor})
+        lng: mentor.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { mentor: mentor })
       }
-      end
-    end
-
-  def show
-      @mentor = policy_scope(User).find(params[:id])
-      @reviews = Review.joins(:consultation).where(consultations:{mentor_id: @mentor.id})
-      authorize @mentor
-      @consultation = Consultation.new
-      authorize @consultation
     end
   end
+
+  def show
+    @mentor = policy_scope(User).find(params[:id])
+    @reviews = Review.joins(:consultation).where(consultations: { mentor_id: @mentor.id })
+    authorize @mentor
+    @consultation = Consultation.new
+    authorize @consultation
+  end
+end
