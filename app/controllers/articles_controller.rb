@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @mentor = @article.user
     authorize @article
-    @comments = @article.comments.order(created_at: :desc)
   end
 
   def new
