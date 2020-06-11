@@ -1,12 +1,14 @@
 <div class="container mt-5 text-center" >
-  <p class="title"><i class="far fa-check-square"></i></p>
+  <p id="check" class="title"><i class="far fa-check-square"></i></p>
   <h1 class="title">Consultation Confirmation</h1>
   <h3 class="my-3">Thanks for booking a consultation!</h3>
-  <p class="mt-4 mb-5">Your confirmation number is: <%= @consultation.id %></p>
+  <h6 class="mt-4 mb-3">Your confirmation number is: <%= @consultation.id %></h6>
+  <div class="mb-4">
     <% if @consultation.date %>
-      <p>Your appointment is on: <%= @consultation.date.strftime("%B %d") %></p>
-      <p>at: <%= @consultation.date.strftime("%I:%M%p") %></p>
+      <h3>Your appointment is on: <%= @consultation.date.strftime("%B %d") %></h3>
+      <h3>at: <%= @consultation.date.strftime("%I:%M%p") %></h3>
     <% end %>
+  </div>
   <%= link_to "See articles written by mentors", articles_path, class: "m-btn-outline py-2" %> <span class="pl-2"><%= link_to "See all your Consultations", dashboard_index_path(@user), class: "m-btn py-2" %></span>
 </div>
 

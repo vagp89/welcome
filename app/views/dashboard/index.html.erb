@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-3">
   <h1 class="title" style="color:#FAAA0A" >Dashboard</h1>
   <p>See all your scheduled consultations below</p>
   <div>
@@ -23,12 +23,11 @@
           <% end %>
           <h2 style="flex: 1; color: #2E4057"><%= consultation.confirmation %></h2>
 
-          <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "✉️ Messages", chatroom_path(@chatroom) %></li></h2>
+          <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "<i class='fas fa-envelope'></i> Messages".html_safe, chatroom_path(@chatroom) %></li></h2>
         </div>
       </div>
     <% end %>
    </div>
   </div>
-</div>
 </div>
 
