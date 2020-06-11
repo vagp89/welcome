@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-7">
       <div class="d-flex justify-content-center">
-        <h1 class="title d-flex justify-content-center"><span class="emp" style="margin-left: -143px;">MENTOR'S </span>PROFILE</h1>
+        <h1 class="title d-flex justify-content-center"><span class="emp pr-2" style="margin-left: -143px;">MENTOR'S </span>PROFILE</h1>
       </div>
       <div>
         <%= cl_image_tag @mentor.photo.key, class: "rounded card-image shadow"  %>
@@ -17,10 +17,13 @@
             <% sum += review.rating.to_i %>
           <% end %>
           <% average = sum/@reviews.length %>
-          <p class="font-weight-lighter" style="margin-left: 59px;"><% average.times do%>
-            <span class="yellow-link"><i class="fas fa-star"></i></span>
-          <% end %>
-          <p style="display: inline;">(<%= @reviews.length %> of reviews)</p>
+          <div class="d-flex justify-content-flex-start">
+            <p class="font-weight-lighter" style="margin-left: 59px;"><% average.times do%>
+              <span class="yellow-link"><i class="fas fa-star"></i></span>
+            <% end %>
+            <p class="pl-2">(<%= @reviews.length %> reviews)</p>
+          </div>
+
           <p class= "text-justify" style="margin-right: -107px;margin-left: 62px;"><%= @mentor.description %></p>
         </div>
       </div>
@@ -44,27 +47,15 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-sm">
-      <div>
-        <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
-          <div class="search-form-control form-group" style="margin-right:25px;margin-left: 15px; margin-bottom: 15px;">
-            <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search mentor" style="margin-top: -39px;margin-bottom: 29px;" />
-            <button name="button" type="submit" class="btn btn-flat">
-              <i class="fas fa-search search-icon"></i>
-            </button>
-          </div>
-        <% end %>
-      </div>
+      <div class="col-sm">
       <div class="card-mentor-add">
         <div class="card-add-infos">
           <div class="container">
             <div class="row">
               <div class="container-mentor">
                   <%=  render 'form', user:@user %>
-                    <div class= "mt-3">
-                </div>
               </div>
+            </div>
           </div>
         </div>
       </div>
