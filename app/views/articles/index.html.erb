@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row" style="justify-content: space-around;">
     <div class= "col-7">
-      <h1 class="title mt-5">Search results: <span class="emp">Articles</span></h1>
+      <h1 class="title mt-5">Search results: <span class="emp"><%= @searchterm %></span></h1>
        <div class="card-deck" style="width: 100%; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 16px;">
         <% @articles.each do |article| %>
           <div class="card-article m-1">
@@ -30,10 +30,10 @@
     </div>
     <div class="col-5">
       <div class="searchbar">
-        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+        <%= simple_form_for :search, url: articles_path, method: :get do |f| %>
         <div class="search-form-control form-group" style="width: 100%;">
-          <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search articles" />
-          <button name="button" type="submit" class="btn btn-flat">
+          <input class="form-control string required pl-5" type="text" name="query" id="query" placeholder="Search articles" />
+          <button name="commit" type="submit" value="search" class="btn btn-flat">
             <i class="fas fa-search search-icon"></i>
           </button>
         </div>
