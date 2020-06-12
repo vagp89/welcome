@@ -163,7 +163,7 @@ file = URI.open('https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?ix
     location: 'Berlin',
     profession: 'Bartender',
     nationality: 'German',
-    expertise: 'Finding a flat, finding a job',
+    expertise: 'Finding a flat, finding a job, health insurance',
     description: "Grew up traveling around the world with my family and never really understood 'borders'. I want to help others cross the borders that humans have arbitrarly placed around the world. The visa system is difficult, but if you are passionate about research you can easily navigate it!"
   )
 mentor.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
