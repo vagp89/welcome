@@ -28,34 +28,26 @@
         </div>
       </div>
 
-        <div>
-          <div class="row">
-            <div>
-              <p class="lt" style="margin-left: 41px;">REVIEWS</p>
-              <ul class="p-0">
-                <% @reviews.each do |review| %>
-                  <li style="margin-left: 43px;margin-right: -74px;">
-                    <p class="font-weight-bold mb-0"><%= review.consultation.asker.first_name %><span class="lt ml-2">23/12/2019</span></p>
-                      <p class="font-weight-lighter"><% review.rating.to_i.times do%>
-                        <span class="yellow-link"><i class="fas fa-star"></i></span>
-                      <% end %></p>
-                    <p class="font-weight-lighter"><%= review.content %></p>
-                  </li>
-                <% end %>
-              </ul>
-            </div>
-          </div>
+
+        <div class="row">
+          <p class="lt" style="margin-left: 41px;">REVIEWS</p>
+          <ul class="p-0">
+            <% @reviews.each do |review| %>
+              <li style="margin-left: 43px;margin-right: -74px;">
+                <p class="font-weight-bold mb-0"><%= review.consultation.asker.first_name %><span class="lt ml-2">23/12/2019</span></p>
+                  <p class="font-weight-lighter"><% review.rating.to_i.times do%>
+                    <span class="yellow-link"><i class="fas fa-star"></i></span>
+                  <% end %></p>
+                <p class="font-weight-lighter"><%= review.content %></p>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
       <div class="col-sm">
-      <div class="card-mentor-add">
-        <div class="card-add-infos">
-          <div class="container">
-            <div class="row">
-              <div class="container-mentor">
-                  <%=  render 'form', user:@user %>
-              </div>
-            </div>
+        <div class="card-mentor-add">
+          <div class="container-mentor">
+              <%=  render 'form', user:@user %>
           </div>
         </div>
       </div>
