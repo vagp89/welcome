@@ -5,12 +5,11 @@
       <div class="text-right  ">
         <p id="main-p">Welcome is a platform that aims to connect those wanting to move abroad to those who have already made the journey. Here you will find the information you need to make this next transition as easy as possible. </p>
       </div>
-      <%= simple_form_for :search, url: articles_path, method: :get, html: { class: "form-inline home-form"}  do |f| %>
-        <label class="sr-only" for="inlineFormInputName2">location</label>
-
-          <input type="text" id="query" name="query" class="form-control mb-2 mr-sm-2" placeholder="location">
-          <button type="submit" id="commit" value="search" class="home-btn mb-1">Get started</button>
-        <% end %>
+      <form class="form-inline home-form">
+        <label class="sr-only" for="inlineFormInputName2">Location</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Location">
+        <button type="submit" class="btn btn-primary mb-1"><%= link_to "Get Started", articles_path %></button>
+      </form>
     </div>
   </div>
   <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60);">
