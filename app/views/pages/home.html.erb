@@ -6,10 +6,9 @@
         <p id="main-p">Welcome is a platform that aims to connect those wanting to move abroad to those who have already made the journey. Here you will find the information you need to make this next transition as easy as possible. </p>
       </div>
       <%= simple_form_for :search, url: articles_path, method: :get, html: { class: "form-inline home-form"}  do |f| %>
-        <label class="sr-only" for="inlineFormInputName2">location</label>
-
-          <input type="text" id="query" name="query" class="form-control mr-3" placeholder="location">
-          <button type="submit" id="commit" value="search" class="home-btn">Get started</button>
+        <label class="sr-only" for="inlineFormInputName2">Location</label>
+          <input type="text" id="query" name="query" class="form-control mr-3" placeholder="Location">
+          <button type="submit" id="commit" value="search" class="home-btn">Get Started</button>
         <% end %>
     </div>
   </div>

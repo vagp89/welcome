@@ -73,6 +73,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
+  margin:0 auto;
+  width: 80%;
 }
 
 .card-add .card-add-infos {
