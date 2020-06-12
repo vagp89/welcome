@@ -2,7 +2,19 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = policy_scope(Article)
+    if params[:query].present?
+      sql_query = " \
+        articles.title @@ :query \
+        OR users.first_name @@ :query \
+        OR users.last_name @@ :query \
+        OR articles.content @@ :query \
+      "
+      @articles = Article.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+      @searchterm = params[:query]
+    else
+      @articles = policy_scope(Article)
+      @searchterm = "Articles"
+    end
     @mentors = policy_scope(User).where(mentor: true)
   end
 
@@ -10,7 +22,6 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @mentor = @article.user
     authorize @article
-    @comments = @article.comments.order(created_at: :desc)
   end
 
   def new

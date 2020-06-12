@@ -10,23 +10,22 @@
         <h2 style="flex: 1.1; color: #2E4017">Status</h2>
         <h2 style="flex: 1; color: #2E4057"> </h2>
       </div>
-    <% @consultations.each do |consultation| %>
-      <div class="dashboard-card">
-        <div class="p-3 d-flex justify-content-around align-items-center">
-
-          <h2 style="padding: 0px 10px 0px;"><%= cl_image_tag consultation.mentor.photo.key,width: 80, height: 50, radius: 100  %></h2>
-
-          <h2 style="flex: 1; color: #FAAA0A;"><%= consultation.mentor.first_name %></h2>
-          <% if consultation.date %>
-              <h2 style="flex: 1; color: #2E4057"><%= consultation.date.strftime("%B %d") %></h2>
-              <h2 style="flex: 1; color: #2E4057"><%= consultation.date.strftime("%I:%M%p") %></h2>
-          <% end %>
-          <h2 style="flex: 1; color: #2E4057"><%= consultation.confirmation %></h2>
-
-          <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "<i class='fas fa-envelope'></i> Messages".html_safe, chatroom_path(@chatroom) %></li></h2>
-        </div>
+      <div class="comments-ul">
+        <% @consultations.each do |consultation| %>
+          <div class="dashboard-card">
+            <div class="p-3 d-flex justify-content-around align-items-center">
+              <h2 style="padding: 0px 10px 0px;"><%= cl_image_tag consultation.mentor.photo.key,width: 70, height: "auto", radius: 100 %></h2>
+              <h2 style="flex: 1; color: #FAAA0A;"><%= consultation.mentor.first_name %></h2>
+              <% if consultation.date %>
+                  <h2 style="flex: 1; color: #2E4057"><%= consultation.date.strftime("%B %d") %></h2>
+                  <h2 style="flex: 1; color: #2E4057"><%= consultation.date.strftime("%I:%M%p") %></h2>
+              <% end %>
+              <h2 style="flex: 1; color: #2E4057"><%= consultation.confirmation %></h2>
+              <h2 style="flex: 1;"><li class="btn c-btn" style="padding: 5px 30px; font-family: Lato, sans-serif;"> <%= link_to "<i class='fas fa-envelope'></i> Messages".html_safe, chatroom_path(@chatroom) %></li></h2>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
    </div>
   </div>
 </div>

@@ -31,16 +31,15 @@
   <div class="article-header">
     <div class="row">
     <div class="col-12">
-      <p class="lt">COMMENTS</p>
-        <ul class="p-0">
+      <p class="blue">COMMENTS <span><%= link_to "<i class='fas fa-comment-dots'></i>".html_safe, new_article_comment_path(@article), class: "yellow-link comment-link"%></span></p>
+        <ul class="p-0 comments-ul">
           <% @article.comments.each do |comment| %>
-            <li class="my-4">
+            <li>
               <p class="font-weight-bold mb-0"><%= comment.user.first_name %><span class="lt ml-2"><%= comment.created_at.strftime("%B %d") %></span></p>
               <p class="font-weight-lighter"><%= comment.content %></p>
             </li>
           <% end %>
         </ul>
-        <p class="pt-4"><%= link_to "Write a comment", new_article_comment_path(@article), class: "m-btn" %></p>
       </div>
     </div>
   </div>

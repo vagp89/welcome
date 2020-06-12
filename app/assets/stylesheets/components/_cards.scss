@@ -73,6 +73,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px;
+  margin:0 auto;
+  width: 80%;
 }
 
 .card-add .card-add-infos {
@@ -85,6 +87,9 @@
   background: #ffffff;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-article img {
@@ -108,8 +113,7 @@
   font-weight: lighter;
 }
 .card-article .card-article-infos {
-  padding: 16px;
-  padding-top: 5px;
+  padding: 8px 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

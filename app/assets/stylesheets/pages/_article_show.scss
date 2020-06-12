@@ -1,0 +1,10 @@
+.comments-ul {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.comment-link {
+  opacity: none;
+  font-size: 30px;
+  padding-left: 10px;
+}
