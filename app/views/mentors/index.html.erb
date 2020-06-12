@@ -31,8 +31,8 @@
       <div class="searchbar">
         <%= simple_form_for :search, url: mentors_path, method: :get do |f| %>
           <div class="search-form-control form-group" style="width: 100%;">
-            <input class="form-control string required pl-5" type="text" name="query" id="query" placeholder="Search mentor" />
-            <button name="commit" value="search" type="submit" class="btn btn-flat">
+            <input class="form-control string required pl-5" type="text" name="search[query]" id="search_query" placeholder="Search Mentors" />
+            <button name="button" type="submit" class="btn btn-flat d-flex justify-content-center">
               <i class="fas fa-search search-icon"></i>
             </button>
           </div>
