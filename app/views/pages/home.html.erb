@@ -8,8 +8,8 @@
       <%= simple_form_for :search, url: articles_path, method: :get, html: { class: "form-inline home-form"}  do |f| %>
         <label class="sr-only" for="inlineFormInputName2">location</label>
 
-          <input type="text" id="query" name="query" class="form-control mb-2 mr-sm-2" placeholder="location">
-          <button type="submit" id="commit" value="search" class="home-btn mb-1">Get started</button>
+          <input type="text" id="query" name="query" class="form-control mr-3" placeholder="location">
+          <button type="submit" id="commit" value="search" class="home-btn">Get started</button>
         <% end %>
     </div>
   </div>
