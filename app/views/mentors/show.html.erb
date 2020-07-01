@@ -1,50 +1,59 @@
 <div class="container">
-  <p class="pt-4 pl-5" style="margin-left: -108px;margin-top: 0px;"><%= link_to "Back to mentors", mentors_path, class: "yellow-link" %></p>
+  <p class="pt-4"><%= link_to "Back to mentors", mentors_path, class: "yellow-link" %></p>
   <div class="row">
-    <div class="col-md-7">
-      <div class="d-flex justify-content-center">
-        <h1 class="title d-flex justify-content-center"><span class="emp pr-2" style="margin-left: -143px;">MENTOR'S </span>PROFILE</h1>
-      </div>
+    <div class="col-7">
+      <h1 class="title" style="margin-left: 35px;"><span class="emp pr-2">MENTOR'S </span>PROFILE</h1>
       <div>
         <%= cl_image_tag @mentor.photo.key, class: "rounded card-image shadow"  %>
       </div>
-      <div class="card-mentor" style="width: 27rem; margin-top: 30px;">
-        <div class="card-body " style="margin-left: -43px;">
-          <h2 class="pb-1 title" style="font-size: 40px; margin-left: 57px; margin-right: 8px; margin-top: -10px; margin-bottom: -0.5rem;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter" style="font-size: 20px;"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
-          <% average = 0 %>
-          <% sum = 0 %>
-          <% @reviews.each do |review| %>
-            <% sum += review.rating.to_i %>
-          <% end %>
-          <% average = sum/@reviews.length %>
-          <div class="d-flex justify-content-flex-start">
-            <p class="font-weight-lighter" style="margin-left: 59px;"><% average.times do%>
-              <span class="yellow-link"><i class="fas fa-star"></i></span>
+      <div class="card-mentor">
+        <div class="card-body">
+          <h2 class="pb-1 title" style="font-size: 40px;"><%= @mentor.first_name %> <%= @mentor.last_name %> <span class="font-weight-lighter" style="font-size: 20px;"><p>Fee: €<%= @mentor.price %> per hour</p></span></h2>
+          <% unless @reviews.length < 0 %>
+            <% average = 0 %>
+            <% sum = 0 %>
+            <% @reviews.each do |review| %>
+              <% sum += review.rating.to_i %>
             <% end %>
-            <p class="pl-2">(<%= @reviews.length %> reviews)</p>
-          </div>
-
-          <p class= "text-justify" style="margin-right: -107px;margin-left: 62px;"><%= @mentor.description %></p>
+            <% average = sum/@reviews.length %>
+            <div class="d-flex justify-content-flex-start">
+              <p class="font-weight-lighter"><% average.times do%>
+                <span class="yellow-link"><i class="fas fa-star"></i></span>
+              <% end %>
+              <% if @reviews.length < 2 %>
+                <p class="pl-2">(<%= @reviews.length %> review)</p>
+              <% else %>
+                <p class="pl-2">(<%= @reviews.length %> reviews)</p>
+              <% end %>
+            </div>
+          <% end %>
+          <p class= "text-justify"><%= @mentor.description %></p>
         </div>
       </div>
       <div class="row">
-        <div>
-          <p class="lt" style="margin-left: 41px;">REVIEWS</p>
-        </div>
-        <ul class="p-0">
-          <% @reviews.each do |review| %>
-            <li style="margin-left: 43px;margin-right: -74px;">
-              <p class="font-weight-bold mb-0"><%= review.consultation.asker.first_name %><span class="lt ml-2">23/12/2019</span></p>
-                <p class="font-weight-lighter"><% review.rating.to_i.times do%>
-                  <span class="yellow-link"><i class="fas fa-star"></i></span>
-                <% end %></p>
-              <p class="font-weight-lighter"><%= review.content %></p>
-            </li>
-          <% end %>
-        </ul>
+        <% unless @reviews.length < 0 %>
+          <div class="card-body">
+            <% if @reviews.length < 2 %>
+              <p class="lt">REVIEW</p>
+            <% else %>
+              <p class="lt">REVIEWS</p>
+            <% end %>
+            <ul class="p-0">
+              <% @reviews.each do |review| %>
+                <li>
+                  <p class="font-weight-bold mb-0"><%= review.consultation.asker.first_name %><span class="lt ml-2">23/12/2019</span></p>
+                    <p class="font-weight-lighter"><% review.rating.to_i.times do%>
+                      <span class="yellow-link"><i class="fas fa-star"></i></span>
+                    <% end %></p>
+                  <p class="font-weight-lighter"><%= review.content %></p>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-5">
       <div class="card-mentor-add">
         <div class="container-mentor">
             <%=  render 'form', user:@user %>
